@@ -1,0 +1,142 @@
+import Link from "next/link";
+import { products, getFullPageProducts, getTeaserProducts } from "@/content/products";
+import { Section, Container } from "@/components/ui/section";
+import { Badge } from "@/components/ui/badge";
+import { ArrowRight, Cpu, Shield, Move, Heart, Moon, Home, Activity, Briefcase, Users } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Products",
+  description: "Explore the complete Montgomery Place product ecosystem — intelligent respiratory care and home wellness solutions powered by OxiSureTech.",
+};
+
+const iconMap: Record<string, React.ElementType> = {
+  Cpu, Shield, Move, Heart, Moon, Home, Activity, Briefcase, Users,
+};
+
+export default function ProductsPage() {
+  const fullProducts = getFullPageProducts();
+  const teaserProducts = getTeaserProducts();
+
+  return (
+    <>
+      {/* Hero */}
+      <Section className="py-16 md:py-24">
+        <Container>
+          <div className="max-w-3xl space-y-6">
+            <Badge>Product Ecosystem</Badge>
+            <h1 className="font-heading text-5xl md:text-6xl font-bold text-[var(--fg)] tracking-tight">
+              Our <span className="text-[var(--accent)]">Products</span>
+            </h1>
+            <p className="text-xl text-[var(--fg-secondary)] leading-relaxed">
+              Every Montgomery Place product is powered by OxiSureTech — our
+              proprietary platform technology that ensures safety, intelligence,
+              and seamless integration across your entire home wellness setup.
+            </p>
+          </div>
+        </Container>
+      </Section>
+
+      {/* Full Products Grid */}
+      <Section variant="muted">
+        <Container>
+          <h2 className="font-heading text-3xl font-bold text-[var(--fg)] mb-12">
+            Featured Products
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            {fullProducts.map((product) => {
+              const Icon = iconMap[product.icon] || Cpu;
+              return (
+                <Link
+                  key={product.slug}
+                  href={`/products/${product.slug}`}
+                  className="group block"
+                >
+                  <div className="h-full rounded-2xl bg-[var(--bg)] border border-[var(--border)] hover:border-[var(--accent)] hover:shadow-xl transition-all duration-300 overflow-hidden">
+                    {/* Image placeholder */}
+                    <div
+                      className="relative aspect-[16/9] flex items-center justify-center"
+                      style={{ background: `linear-gradient(135deg, ${product.color}15, ${product.color}05)` }}
+                    >
+                      <Icon
+                        className="w-20 h-20 opacity-15"
+                        style={{ color: product.color }}
+                      />
+                    </div>
+                    <div className="p-8 space-y-4">
+                      <div className="flex items-center gap-3">
+                        <div
+                          className="w-10 h-10 rounded-xl flex items-center justify-center"
+                          style={{ backgroundColor: `${product.color}15` }}
+                        >
+                          <Icon className="w-5 h-5" style={{ color: product.color }} />
+                        </div>
+                        <span className="text-xs uppercase tracking-wider text-[var(--fg-secondary)] font-semibold">
+                          {product.category}
+                        </span>
+                      </div>
+                      <h3 className="font-heading text-2xl font-bold text-[var(--fg)] group-hover:text-[var(--accent)] transition-colors">
+                        {product.name}
+                      </h3>
+                      <p className="text-[var(--accent)] font-medium">{product.tagline}</p>
+                      <p className="text-sm text-[var(--fg-secondary)] leading-relaxed line-clamp-3">
+                        {product.description}
+                      </p>
+                      <div className="flex items-center gap-2 text-sm font-medium text-[var(--accent)] group-hover:gap-3 transition-all">
+                        Learn more <ArrowRight className="w-4 h-4" />
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        </Container>
+      </Section>
+
+      {/* Teaser Products */}
+      <Section>
+        <Container>
+          <div className="text-center mb-12 space-y-4">
+            <h2 className="font-heading text-3xl font-bold text-[var(--fg)]">
+              Coming Soon
+            </h2>
+            <p className="text-[var(--fg-secondary)] max-w-xl mx-auto">
+              More OxiSureTech-powered products are in active development.
+            </p>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {teaserProducts.map((product) => {
+              const Icon = iconMap[product.icon] || Cpu;
+              return (
+                <div
+                  key={product.slug}
+                  className="relative p-6 rounded-2xl bg-[var(--bg-elevated)] border border-[var(--border)] space-y-4 overflow-hidden"
+                >
+                  <div
+                    className="absolute top-0 left-0 right-0 h-1 opacity-60"
+                    style={{ background: `linear-gradient(to right, ${product.color}, ${product.color}80)` }}
+                  />
+                  <div className="flex items-center gap-3">
+                    <div
+                      className="w-10 h-10 rounded-xl flex items-center justify-center"
+                      style={{ backgroundColor: `${product.color}15` }}
+                    >
+                      <Icon className="w-5 h-5" style={{ color: product.color }} />
+                    </div>
+                    <h3 className="font-heading text-lg font-bold text-[var(--fg)]">{product.name}</h3>
+                  </div>
+                  <p className="text-sm text-[var(--accent)] font-medium">{product.tagline}</p>
+                  <p className="text-sm text-[var(--fg-secondary)] leading-relaxed">
+                    {product.description}
+                  </p>
+                  <Badge variant="outline">Coming Soon</Badge>
+                </div>
+              );
+            })}
+          </div>
+        </Container>
+      </Section>
+    </>
+  );
+}
