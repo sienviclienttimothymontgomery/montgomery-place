@@ -16,7 +16,7 @@ export function Section({
   return (
     <section
       className={cn(
-        "py-24 md:py-32",
+        "py-16 md:py-24",
         {
           "bg-[var(--bg)]": variant === "default",
           "bg-[var(--bg-elevated)]": variant === "muted",

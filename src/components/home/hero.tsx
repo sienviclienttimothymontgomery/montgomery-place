@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Section, Container } from "@/components/ui/section";
+import { Container } from "@/components/ui/section";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
 
@@ -11,13 +11,13 @@ export function Hero() {
       <div className="absolute bottom-1/4 left-[10%] w-[400px] h-[400px] bg-teal-400 rounded-full opacity-[0.04] blur-3xl" />
 
       <Container className="relative py-20">
-        <div className="max-w-4xl mx-auto text-center space-y-10">
+        <div className="max-w-4xl mx-auto text-center space-y-8">
           <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[var(--accent)]/10 text-[var(--accent)] text-sm font-semibold tracking-wide">
             <Sparkles className="w-4 h-4" />
             Powered by OxiSureTech
           </div>
 
-          <h1 className="font-heading text-[3.5rem] md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.05]">
+          <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1]">
             <span className="text-slate-900 dark:text-white">Healthier Living,</span>{" "}
             <br className="hidden sm:block" />
             <span className="bg-gradient-to-r from-[var(--accent)] to-teal-400 bg-clip-text text-transparent">
@@ -29,7 +29,7 @@ export function Hero() {
             </span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-[var(--fg-secondary)] max-w-2xl mx-auto leading-relaxed font-light">
+          <p className="text-lg md:text-xl text-[var(--fg-secondary)] max-w-2xl mx-auto leading-relaxed font-light">
             Montgomery Place is reimagining respiratory care with intelligent,
             beautifully designed products that integrate seamlessly into your
             daily life.
@@ -37,13 +37,13 @@ export function Hero() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
             <Link href="/products">
-              <Button size="lg" className="text-base px-10 py-4 rounded-2xl shadow-lg hover:shadow-xl">
+              <Button size="lg" className="text-base px-10 py-4 rounded-2xl shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-200">
                 Explore Products
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </Link>
             <Link href="/technology/oxisuretech">
-              <Button variant="outline" size="lg" className="text-base px-10 py-4 rounded-2xl">
+              <Button variant="outline" size="lg" className="text-base px-10 py-4 rounded-2xl border-2 hover:scale-[1.02] transition-all duration-200">
                 Discover OxiSureTech
               </Button>
             </Link>

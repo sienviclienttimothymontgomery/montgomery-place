@@ -23,7 +23,7 @@ export function Button({
             variant === "primary",
           "bg-[var(--accent-surface)] text-[var(--accent)] hover:bg-[var(--accent)] hover:text-white":
             variant === "secondary",
-          "border-2 border-[var(--border)] text-[var(--fg)] hover:border-[var(--accent)] hover:text-[var(--accent)]":
+          "border-2 border-[var(--accent)]/40 text-[var(--fg)] hover:border-[var(--accent)] hover:text-[var(--accent)] hover:bg-[var(--accent)]/5":
             variant === "outline",
           "text-[var(--fg-secondary)] hover:text-[var(--fg)] hover:bg-[var(--accent-surface)]":
             variant === "ghost",
