@@ -17,7 +17,7 @@ export function Hero() {
             Powered by OxiSureTech
           </div>
 
-          <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.1]">
+          <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-[1.1]">
             <span className="text-slate-900 dark:text-white">Healthier Living,</span>{" "}
             <br className="hidden sm:block" />
             <span className="bg-gradient-to-r from-[var(--accent)] to-teal-400 bg-clip-text text-transparent">
@@ -43,7 +43,7 @@ export function Hero() {
               </Button>
             </Link>
             <Link href="/technology/oxisuretech">
-              <Button variant="outline" size="lg" className="text-base px-10 py-4 rounded-2xl border-2 hover:scale-[1.02] transition-all duration-200">
+              <Button variant="outline" size="lg" className="text-base px-10 py-4 rounded-2xl border-2 border-[var(--accent)] text-[var(--accent)] hover:bg-[var(--accent)] hover:text-white hover:scale-[1.02] transition-all duration-200">
                 Discover OxiSureTech
               </Button>
             </Link>
