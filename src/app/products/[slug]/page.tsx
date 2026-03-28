@@ -53,14 +53,16 @@ export default async function ProductDetailPage({
         <Container>
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
-              <Link
-                href="/products"
-                className="inline-flex items-center gap-2 text-sm text-[var(--fg-secondary)] hover:text-[var(--accent)] transition-colors"
-              >
-                <ArrowLeft className="w-4 h-4" />
-                All Products
-              </Link>
-              <Badge>{product.category}</Badge>
+              <div className="flex items-center gap-4">
+                <Link
+                  href="/products"
+                  className="inline-flex items-center gap-2 text-sm text-[var(--fg-secondary)] hover:text-[var(--accent)] transition-colors"
+                >
+                  <ArrowLeft className="w-4 h-4" />
+                  All Products
+                </Link>
+                <Badge>{product.category}</Badge>
+              </div>
               <h1 className="font-heading text-5xl md:text-6xl font-bold text-[var(--fg)] tracking-tight">
                 {product.name}
               </h1>

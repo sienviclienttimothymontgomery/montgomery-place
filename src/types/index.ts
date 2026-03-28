@@ -7,7 +7,7 @@ export interface Product {
   features: string[];
   category: ProductCategory;
   icon: string;
-  image: string;
+  image?: string;
   fullPage: boolean;
   color: string;
 }

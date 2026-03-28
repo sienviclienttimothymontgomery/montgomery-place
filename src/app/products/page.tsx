@@ -62,11 +62,13 @@ export default function ProductsPage() {
                         className="absolute w-20 h-20 opacity-15 z-0"
                         style={{ color: product.color }}
                       />
-                      <img 
-                        src={product.image}
-                        alt={product.name}
-                        className="absolute inset-0 w-full h-full object-cover z-10 transition-all duration-700 group-hover:scale-105"
-                      />
+                      {product.image && (
+                        <img 
+                          src={product.image}
+                          alt={product.name}
+                          className="absolute inset-0 w-full h-full object-cover z-10 transition-all duration-700 group-hover:scale-105"
+                        />
+                      )}
                     </div>
                     <div className="p-8 space-y-4">
                       <div className="flex items-center gap-3">
