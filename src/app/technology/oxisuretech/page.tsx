@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Section, Container } from "@/components/ui/section";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Cpu, Zap, Shield, Wifi, BarChart3, RefreshCw, Lock, Layers } from "lucide-react";
+import { ArrowRight, Cpu, Zap, Shield, Wifi, BarChart3, RefreshCw, Lock, Layers, Heart, Move } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -12,44 +12,34 @@ export const metadata: Metadata = {
 
 const capabilities = [
   {
-    icon: Zap,
-    title: "Adaptive Flow Engine",
-    description: "Continuously adjusts oxygen delivery based on environmental conditions, usage patterns, and real-time safety thresholds.",
-  },
-  {
-    icon: Shield,
-    title: "Multi-Layer Safety",
-    description: "Intelligent monitoring with automatic shutoff protocols, environmental awareness, and predictive fault detection.",
-  },
-  {
-    icon: Wifi,
-    title: "Cross-Device Connectivity",
-    description: "Seamless interoperability between every Montgomery Place product — unified data, coordinated performance.",
-  },
-  {
-    icon: BarChart3,
-    title: "Smart Analytics",
-    description: "Usage insights and wellness data presented in clear, actionable formats for users and caregivers.",
-  },
-  {
     icon: RefreshCw,
-    title: "Over-the-Air Updates",
-    description: "Future-ready firmware architecture that improves performance and adds capabilities without hardware changes.",
-  },
-  {
-    icon: Lock,
-    title: "Privacy-First Design",
-    description: "All data collection follows strict privacy principles with user control over sharing and retention.",
+    title: "Tangle-Free Mobility",
+    description: "Stays smooth and untwisted during movement. Perfect for daily use or overnight comfort.",
   },
   {
     icon: Layers,
-    title: "Modular Architecture",
-    description: "Clean separation of concerns allows rapid development of new products on the same trusted foundation.",
+    title: "Universal Compatibility",
+    description: "Fits most oxygen concentrators and regulators with a secure, leak-free connection.",
   },
   {
-    icon: Cpu,
-    title: "Energy Efficient",
-    description: "Optimized power management extends battery life for portable products and reduces energy costs at home.",
+    icon: Zap,
+    title: "Consistent Oxygen Flow",
+    description: "Engineered for steady, uninterrupted airflow — every breath, every time.",
+  },
+  {
+    icon: Heart,
+    title: "Soft-to-Skin Touch",
+    description: "Gentle and latex-free material that minimizes friction and pressure on delicate skin.",
+  },
+  {
+    icon: Shield,
+    title: "Kink-Resistant Engineering",
+    description: "Internal 6-channel spiral design prevents pinching or blockage, keeping oxygen flowing freely.",
+  },
+  {
+    icon: Move,
+    title: "Durable Yet Lightweight",
+    description: "Strong, flexible medical-grade PVC that’s easy to manage and built to last through daily active use.",
   },
 ];
 
@@ -62,19 +52,15 @@ export default function OxiSureTechPage() {
         <div className="absolute top-20 right-20 w-96 h-96 bg-[var(--accent)] rounded-full opacity-5 blur-3xl" />
         <Container className="relative">
           <div className="max-w-3xl space-y-8">
-            <Badge>Platform Technology</Badge>
+            <Badge>Core Foundation</Badge>
             <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold text-[var(--fg)] tracking-tight leading-[1.1]">
               OxiSureTech
             </h1>
             <p className="text-2xl text-[var(--accent)] font-medium">
-              The Foundation of Smarter Respiratory Care
+              Breathing Made Better.
             </p>
             <p className="text-lg text-[var(--fg-secondary)] leading-relaxed">
-              OxiSureTech is Montgomery Place&apos;s proprietary platform technology
-              — the intelligent backbone that powers every product in our
-              ecosystem. It combines advanced oxygen delivery optimization,
-              real-time monitoring, and adaptive flow management to ensure
-              safety, efficiency, and comfort in every breath.
+              Experience uninterrupted oxygen flow with our premium kink-resistant oxygen tubing. Engineered for comfort and reliability, our tubing features advanced materials that prevent kinking and ensure consistent oxygen delivery. Perfect for active lifestyles and everyday use.
             </p>
           </div>
         </Container>
@@ -85,28 +71,17 @@ export default function OxiSureTechPage() {
         <Container size="md">
           <div className="space-y-6">
             <h2 className="font-heading text-4xl font-bold text-[var(--fg)]">
-              A New Approach to Respiratory Technology
+              Our Mission
             </h2>
             <div className="space-y-4 text-lg text-[var(--fg-secondary)] leading-relaxed">
               <p>
-                OxiSureTech represents a fundamental rethinking of how
-                respiratory technology should work in the home. Rather than
-                treating oxygen delivery as a simple utility, OxiSureTech applies
-                intelligent monitoring, adaptive algorithms, and seamless
-                connectivity to create a living system that responds to your
-                needs in real time.
+                OxiSure Tech was founded with one goal: to bring reliable oxygen solutions that improve quality of life. We combine innovation, precision, and compassion to ensure that every breath you take is supported by care you can trust.
               </p>
               <p>
-                At the heart of OxiSureTech is our proprietary flow optimization
-                engine, which continuously adjusts delivery parameters based on
-                environmental conditions, usage patterns, and safety thresholds.
-                This means you&apos;re always receiving precisely what you need — no
-                more, no less.
+                Whether you need short tubing for bedside comfort or extended lengths for full-home mobility, our six-channel reinforced design helps maintain steady oxygen flow even when the tubing bends during everyday movement.
               </p>
               <p>
-                Every product in the Montgomery Place lineup is built on
-                OxiSureTech, ensuring consistent quality, interoperability, and a
-                unified experience across your entire home wellness setup.
+                Every product in the Montgomery Place lineup is designed to integrate seamlessly with OxiSureTech Premium Tubing, ensuring a flawless, tangle-free oxygen delivery experience.
               </p>
             </div>
           </div>
@@ -118,11 +93,10 @@ export default function OxiSureTechPage() {
         <Container>
           <div className="text-center mb-16 space-y-4">
             <h2 className="font-heading text-4xl font-bold text-[var(--fg)]">
-              Platform Capabilities
+              Engineered for Real Life
             </h2>
             <p className="text-lg text-[var(--fg-secondary)] max-w-2xl mx-auto">
-              Eight core technologies working together to deliver intelligent,
-              safe, and seamless respiratory care.
+              Six core features designed to deliver safe, consistent, and comfortable respiratory care.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">

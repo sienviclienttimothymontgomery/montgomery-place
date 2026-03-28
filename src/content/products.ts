@@ -3,24 +3,22 @@ import { Product } from "@/types";
 export const products: Product[] = [
   {
     slug: "oxisuretech",
-    name: "OxiSureTech",
-    tagline: "The Foundation of Smarter Respiratory Care",
+    name: "OxiSureTech Premium Tubing",
+    tagline: "Breathing Made Better.",
     description:
-      "OxiSureTech is Montgomery Place's proprietary platform technology — the intelligent backbone that powers every product in our ecosystem. It combines advanced oxygen delivery optimization, real-time monitoring, and adaptive flow management to ensure safety, efficiency, and comfort in every breath.",
+      "Premium, kink-resistant, 6-channel oxygen tubing built for tangle-free mobility, continuous flow, and long-lasting durability.",
     longDescription:
-      "OxiSureTech represents a fundamental rethinking of how respiratory technology should work in the home. Rather than treating oxygen delivery as a simple utility, OxiSureTech applies intelligent monitoring, adaptive algorithms, and seamless connectivity to create a living system that responds to your needs in real time.\n\nAt the heart of OxiSureTech is our proprietary flow optimization engine, which continuously adjusts delivery parameters based on environmental conditions, usage patterns, and safety thresholds. This means you're always receiving precisely what you need — no more, no less.\n\nEvery product in the Montgomery Place lineup is built on OxiSureTech, ensuring consistent quality, interoperability, and a unified experience across your entire home wellness setup.",
+      "OxiSure Tech was founded with one goal: to bring reliable oxygen solutions that improve quality of life. We combine innovation, precision, and compassion to ensure that every breath you take is supported by care you can trust.\n\nExperience uninterrupted oxygen flow with our premium kink-resistant oxygen tubing. Engineered for comfort and reliability, our tubing features advanced materials that prevent kinking and ensure consistent oxygen delivery. Perfect for active lifestyles and everyday use.",
     features: [
-      "Adaptive oxygen flow optimization",
-      "Real-time safety monitoring",
-      "Cross-device interoperability",
-      "Energy-efficient operation",
-      "Whisper-quiet performance",
-      "Smart usage analytics",
-      "Automatic safety shutoff protocols",
-      "Future-ready firmware updates",
+      "Six-channel kink-resistant design",
+      "Tangle-free mobility",
+      "Soft-to-skin latex-free touch",
+      "Universal device compatibility",
+      "Durable yet lightweight"
     ],
     category: "platform",
     icon: "Cpu",
+    image: "/montgomery-place/images/products/oxisuretech.png",
     fullPage: true,
     color: "#0D6E6E",
   },

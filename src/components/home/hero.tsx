@@ -35,9 +35,7 @@ export function Hero() {
             </h1>
 
             <p className="text-lg md:text-xl text-[var(--fg-secondary)] max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
-              Montgomery Place is reimagining respiratory care with intelligent,
-              beautifully designed products that integrate seamlessly into your
-              daily life.
+              Montgomery Place is reimagining respiratory care. Powered by the OxiSureTech premium kink-resistant oxygen delivery foundation, our beautifully designed products integrate seamlessly into your daily life. Breathing Made Better.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">

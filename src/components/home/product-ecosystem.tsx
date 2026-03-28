@@ -21,9 +21,8 @@ export function ProductEcosystem() {
             One Platform, <span className="text-[var(--accent)]">Infinite Possibilities</span>
           </h2>
           <p className="text-lg text-[var(--fg-secondary)] max-w-2xl mx-auto leading-relaxed">
-            Every Montgomery Place product is built on OxiSureTech, creating a
-            unified ecosystem where all your respiratory wellness needs work
-            together seamlessly.
+            Every Montgomery Place product is designed to integrate seamlessly with 
+            OxiSureTech Premium Tubing, creating a flawless, kink-resistant oxygen delivery experience.
           </p>
         </div>
 
