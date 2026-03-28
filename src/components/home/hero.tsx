@@ -11,7 +11,7 @@ export function Hero() {
       <div className="absolute bottom-1/4 left-[10%] w-[400px] h-[400px] bg-teal-400 rounded-full opacity-[0.04] blur-3xl" />
       
       {/* Grid Pattern */}
-      <div className="absolute inset-0 bg-[url('/images/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-[0.03] dark:opacity-[0.02]" />
+      <div className="absolute inset-0 bg-[url('/montgomery-place/images/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-[0.03] dark:opacity-[0.02]" />
 
       <Container className="relative py-20">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
@@ -59,7 +59,7 @@ export function Hero() {
           <div className="relative mx-auto w-full max-w-lg lg:max-w-none">
             <div className="absolute inset-0 bg-gradient-to-tr from-[var(--accent)] to-teal-400 rounded-full blur-3xl opacity-20 animate-pulse-slow object-cover" />
             <img 
-              src="/images/products/sleepflow.png" 
+              src="/montgomery-place/images/products/sleepflow.png" 
               alt="Montgomery Place SleepFlow Oxygent Concentrator" 
               className="relative z-10 w-full h-auto drop-shadow-2xl hero-float rounded-3xl border border-white/10"
               loading="eager"

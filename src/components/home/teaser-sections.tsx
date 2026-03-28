@@ -9,7 +9,7 @@ const teasers = [
     description:
       "Purpose-built for nighttime use, SleepFlow combines whisper-quiet operation with adaptive flow management for truly restful sleep.",
     icon: Moon,
-    image: "/images/products/sleepflow.png",
+    image: "/montgomery-place/images/products/sleepflow.png",
     color: "#6366F1",
     category: "Sleep Wellness",
   },
@@ -19,7 +19,7 @@ const teasers = [
     description:
       "A connected home air quality monitor that works with your OxiSureTech devices, providing real-time environmental data and smart recommendations.",
     icon: Home,
-    image: "/images/products/airvista.png",
+    image: "/montgomery-place/images/products/airvista.png",
     color: "#8B5CF6",
     category: "Home Environment",
   },
