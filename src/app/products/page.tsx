@@ -55,12 +55,17 @@ export default function ProductsPage() {
                   <div className="h-full rounded-2xl bg-[var(--bg)] border border-[var(--border)] hover:border-[var(--accent)] hover:shadow-xl transition-all duration-300 overflow-hidden">
                     {/* Image placeholder */}
                     <div
-                      className="relative aspect-[16/9] flex items-center justify-center"
+                      className="relative aspect-[16/9] flex items-center justify-center overflow-hidden"
                       style={{ background: `linear-gradient(135deg, ${product.color}15, ${product.color}05)` }}
                     >
                       <Icon
-                        className="w-20 h-20 opacity-15"
+                        className="absolute w-20 h-20 opacity-15 z-0"
                         style={{ color: product.color }}
+                      />
+                      <img 
+                        src={product.image}
+                        alt={product.name}
+                        className="absolute inset-0 w-full h-full object-cover z-10 transition-all duration-700 group-hover:scale-105"
                       />
                     </div>
                     <div className="p-8 space-y-4">

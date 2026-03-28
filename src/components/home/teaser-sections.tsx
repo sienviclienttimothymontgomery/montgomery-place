@@ -9,6 +9,7 @@ const teasers = [
     description:
       "Purpose-built for nighttime use, SleepFlow combines whisper-quiet operation with adaptive flow management for truly restful sleep.",
     icon: Moon,
+    image: "/images/products/sleepflow.png",
     color: "#6366F1",
     category: "Sleep Wellness",
   },
@@ -18,6 +19,7 @@ const teasers = [
     description:
       "A connected home air quality monitor that works with your OxiSureTech devices, providing real-time environmental data and smart recommendations.",
     icon: Home,
+    image: "/images/products/airvista.png",
     color: "#8B5CF6",
     category: "Home Environment",
   },
@@ -51,7 +53,7 @@ export function TeaserSections() {
           {teasers.map((product) => (
             <div
               key={product.name}
-              className="relative p-8 rounded-3xl bg-[var(--bg-elevated)] border border-[var(--border)] space-y-5 overflow-hidden hover:shadow-lg transition-all duration-300"
+              className="relative p-8 rounded-3xl bg-[var(--bg-elevated)] border border-[var(--border)] space-y-5 overflow-hidden hover:shadow-[var(--shadow-diffuse)] transition-all duration-500 hover:-translate-y-1 z-10 group"
             >
               <div
                 className="absolute top-0 left-0 right-0 h-1.5 rounded-t-3xl"
@@ -59,16 +61,29 @@ export function TeaserSections() {
                   background: `linear-gradient(to right, ${product.color}, ${product.color}80)`,
                 }}
               />
-              <div className="flex items-center gap-4 pt-2">
-                <div
-                  className="w-14 h-14 rounded-2xl flex items-center justify-center"
-                  style={{ backgroundColor: `${product.color}12` }}
-                >
-                  <product.icon
-                    className="w-7 h-7"
-                    style={{ color: product.color }}
+              {product.image ? (
+                <div className="relative h-48 -mx-8 -mt-8 mb-6 overflow-hidden rounded-t-3xl">
+                  <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-elevated)] to-transparent z-10" />
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                 </div>
+              ) : null}
+              
+              <div className="flex items-center gap-4 pt-2">
+                {!product.image && (
+                  <div
+                    className="w-14 h-14 rounded-2xl flex items-center justify-center"
+                    style={{ backgroundColor: `${product.color}12` }}
+                  >
+                    <product.icon
+                      className="w-7 h-7"
+                      style={{ color: product.color }}
+                    />
+                  </div>
+                )}
                 <div>
                   <h3 className="font-heading text-xl font-bold text-[var(--fg)]">
                     {product.name}

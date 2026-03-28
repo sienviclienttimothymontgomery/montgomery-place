@@ -114,13 +114,13 @@ export function ProductSpotlights() {
               {/* Image placeholder */}
               <div className={product.reverse ? "lg:order-1" : ""}>
                 <div
-                  className="aspect-[4/3] rounded-3xl flex items-center justify-center"
+                  className="aspect-[4/3] rounded-3xl flex items-center justify-center transition-all duration-500 hover:shadow-[var(--shadow-diffuse)] hover:scale-[1.02] group"
                   style={{
                     background: `linear-gradient(135deg, ${product.color}12, ${product.color}04)`,
                   }}
                 >
                   <product.icon
-                    className="w-28 h-28 opacity-15"
+                    className="w-28 h-28 opacity-15 transition-transform duration-500 group-hover:scale-110"
                     style={{ color: product.color }}
                   />
                 </div>

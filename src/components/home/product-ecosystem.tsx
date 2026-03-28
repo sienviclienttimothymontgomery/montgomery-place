@@ -32,22 +32,22 @@ export function ProductEcosystem() {
           {/* Center Hub */}
           <div className="flex justify-center mb-16">
             <div className="relative">
-              <div className="w-36 h-36 md:w-44 md:h-44 rounded-full bg-gradient-to-br from-[var(--accent)] to-teal-400 flex items-center justify-center shadow-2xl">
+              <div className="w-36 h-36 md:w-44 md:h-44 rounded-full bg-gradient-to-br from-[var(--accent)] to-teal-400 flex items-center justify-center shadow-[var(--shadow-diffuse-accent)] hover:scale-105 transition-transform duration-500 z-10 relative">
                 <div className="text-center text-white">
-                  <Cpu className="w-12 h-12 md:w-14 md:h-14 mx-auto mb-1" />
-                  <span className="text-sm md:text-base font-bold">OxiSureTech</span>
+                  <Cpu className="w-12 h-12 md:w-14 md:h-14 mx-auto mb-1 drop-shadow-md" />
+                  <span className="text-sm md:text-base font-bold drop-shadow-md">OxiSureTech</span>
                 </div>
               </div>
-              <div className="absolute inset-0 rounded-full border-2 border-[var(--accent)] opacity-20 animate-ping" />
+              <div className="absolute inset-0 rounded-full border-2 border-[var(--accent)] opacity-20 animate-ping z-0" />
             </div>
           </div>
 
           {/* Product Nodes */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-5 md:gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-5 md:gap-6 stagger-children">
             {ecosystemItems.map((item) => (
               <div
                 key={item.name}
-                className="flex flex-col items-center gap-4 p-6 md:p-7 rounded-3xl bg-[var(--bg-elevated)] border border-[var(--border)] hover:border-[var(--accent)] hover:shadow-lg transition-all duration-300 group"
+                className="flex flex-col items-center gap-4 p-6 md:p-7 rounded-3xl bg-[var(--bg-elevated)] border border-[var(--border)] hover:border-[var(--accent)] hover:shadow-[var(--shadow-diffuse)] hover:-translate-y-1 transition-all duration-300 group z-10"
               >
                 <div
                   className="w-14 h-14 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform"
