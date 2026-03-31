@@ -86,9 +86,18 @@ export default async function ProductDetailPage({
             {/* Product visual */}
             <div className="flex flex-col gap-4">
               {product.gallery ? (
-                <div className="aspect-square rounded-3xl overflow-hidden relative bg-[var(--bg-elevated)] border border-[var(--border)]">
-                  <img src={product.gallery[0]} alt={product.name} className="absolute inset-0 w-full h-full object-cover" />
-                </div>
+                <>
+                  <div className="aspect-square rounded-3xl overflow-hidden relative bg-[var(--bg-elevated)] border border-[var(--border)]">
+                    <img src={product.gallery[0]} alt={product.name} className="absolute inset-0 w-full h-full object-cover" />
+                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    {product.gallery.slice(1).map((img, i) => (
+                      <div key={i} className="aspect-square rounded-2xl overflow-hidden relative bg-[var(--bg-elevated)] border border-[var(--border)] transition-transform hover:scale-105">
+                        <img src={img} alt={`${product.name} detail ${i + 1}`} className="absolute inset-0 w-full h-full object-cover" />
+                      </div>
+                    ))}
+                  </div>
+                </>
               ) : product.image ? (
                 <div className="aspect-square rounded-3xl overflow-hidden relative bg-[var(--bg-elevated)] border border-[var(--border)]">
                   <img src={product.image} alt={product.name} className="absolute inset-0 w-full h-full object-cover" />
