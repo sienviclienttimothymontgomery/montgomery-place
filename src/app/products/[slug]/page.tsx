@@ -84,16 +84,37 @@ export default async function ProductDetailPage({
             </div>
 
             {/* Product visual */}
-            <div
-              className="aspect-square rounded-3xl flex items-center justify-center"
-              style={{
-                background: `linear-gradient(135deg, ${product.color}15, ${product.color}05)`,
-              }}
-            >
-              <Icon
-                className="w-40 h-40 opacity-15"
-                style={{ color: product.color }}
-              />
+            <div className="flex flex-col gap-4">
+              {product.gallery ? (
+                <>
+                  <div className="aspect-square rounded-3xl overflow-hidden relative bg-[var(--bg-elevated)] border border-[var(--border)]">
+                    <img src={product.gallery[0]} alt={product.name} className="absolute inset-0 w-full h-full object-cover" />
+                  </div>
+                  <div className="grid grid-cols-3 gap-4">
+                    {product.gallery.slice(1).map((img, i) => (
+                      <div key={i} className="aspect-square rounded-2xl overflow-hidden relative bg-[var(--bg-elevated)] border border-[var(--border)] transition-transform hover:scale-105">
+                        <img src={img} alt={`${product.name} detail ${i + 1}`} className="absolute inset-0 w-full h-full object-cover" />
+                      </div>
+                    ))}
+                  </div>
+                </>
+              ) : product.image ? (
+                <div className="aspect-square rounded-3xl overflow-hidden relative bg-[var(--bg-elevated)] border border-[var(--border)]">
+                  <img src={product.image} alt={product.name} className="absolute inset-0 w-full h-full object-cover" />
+                </div>
+              ) : (
+                <div
+                  className="aspect-square rounded-3xl flex items-center justify-center border border-[var(--border)]"
+                  style={{
+                    background: `linear-gradient(135deg, ${product.color}15, ${product.color}05)`,
+                  }}
+                >
+                  <Icon
+                    className="w-40 h-40 opacity-15"
+                    style={{ color: product.color }}
+                  />
+                </div>
+              )}
             </div>
           </div>
         </Container>

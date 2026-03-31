@@ -8,6 +8,7 @@ export interface Product {
   category: ProductCategory;
   icon: string;
   image?: string;
+  gallery?: string[];
   fullPage: boolean;
   color: string;
 }
