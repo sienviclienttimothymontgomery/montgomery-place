@@ -11,7 +11,7 @@ export function Hero() {
       <div className="absolute bottom-1/4 left-[10%] w-[400px] h-[400px] bg-teal-400 rounded-full opacity-[0.04] blur-3xl" />
       
       {/* Grid Pattern */}
-      <div className="absolute inset-0 bg-[url('/montgomery-place/images/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-[0.03] dark:opacity-[0.02]" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] opacity-20 dark:opacity-10" />
 
       <Container className="relative py-20">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
@@ -22,7 +22,7 @@ export function Hero() {
               Powered by OxiSureTech
             </div>
 
-            <h1 className="font-heading text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-[1.1]">
+            <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] sm:leading-tight">
               <span className="text-slate-900 dark:text-white">Healthier Living,</span>{" "}
               <br className="hidden sm:block" />
               <span className="bg-gradient-to-r from-[var(--accent)] to-teal-400 bg-clip-text text-transparent">

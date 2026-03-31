@@ -19,7 +19,7 @@ export function Footer() {
                   {siteConfig.name}
                 </span>
               </Link>
-              <p className="text-sm text-slate-400 max-w-sm leading-relaxed">
+              <p className="text-sm text-slate-300 max-w-sm leading-relaxed">
                 {siteConfig.description}
               </p>
               <a
@@ -41,7 +41,7 @@ export function Footer() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-sm text-slate-400 hover:text-white transition-colors"
+                      className="text-sm text-slate-300 hover:text-white transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -60,7 +60,7 @@ export function Footer() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-sm text-slate-400 hover:text-white transition-colors"
+                      className="text-sm text-slate-300 hover:text-white transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -79,7 +79,7 @@ export function Footer() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-sm text-slate-400 hover:text-white transition-colors"
+                      className="text-sm text-slate-300 hover:text-white transition-colors"
                     >
                       {link.label}
                     </Link>
@@ -91,8 +91,8 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="py-6 border-t border-slate-700/60 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-slate-500">
+        <div className="py-6 border-t border-slate-700 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-xs text-slate-400">
             &copy; {new Date().getFullYear()} Montgomery Place LLC. All rights
             reserved.
           </p>
@@ -101,7 +101,7 @@ export function Footer() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-xs text-slate-500 hover:text-slate-300 transition-colors"
+                className="text-xs text-slate-400 hover:text-white transition-colors"
               >
                 {link.label}
               </Link>

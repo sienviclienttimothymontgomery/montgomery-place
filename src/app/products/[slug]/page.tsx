@@ -63,7 +63,7 @@ export default async function ProductDetailPage({
                 </Link>
                 <Badge>{product.category}</Badge>
               </div>
-              <h1 className="font-heading text-5xl md:text-6xl font-bold text-[var(--fg)] tracking-tight">
+              <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--fg)] tracking-tight">
                 {product.name}
               </h1>
               <p
@@ -90,7 +90,7 @@ export default async function ProductDetailPage({
                   <div className="aspect-square rounded-3xl overflow-hidden relative bg-[var(--bg-elevated)] border border-[var(--border)]">
                     <img src={product.gallery[0]} alt={product.name} className="absolute inset-0 w-full h-full object-cover" />
                   </div>
-                  <div className="grid grid-cols-3 gap-4">
+                  <div className="grid grid-cols-2 gap-4">
                     {product.gallery.slice(1).map((img, i) => (
                       <div key={i} className="aspect-square rounded-2xl overflow-hidden relative bg-[var(--bg-elevated)] border border-[var(--border)] transition-transform hover:scale-105">
                         <img src={img} alt={`${product.name} detail ${i + 1}`} className="absolute inset-0 w-full h-full object-cover" />
@@ -139,7 +139,7 @@ export default async function ProductDetailPage({
       )}
 
       {/* Features */}
-      <Section>
+      <Section className="py-12 md:py-16">
         <Container>
           <div className="text-center mb-16 space-y-4">
             <h2 className="font-heading text-4xl font-bold text-[var(--fg)]">
