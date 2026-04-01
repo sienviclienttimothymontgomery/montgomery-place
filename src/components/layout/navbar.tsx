@@ -24,9 +24,11 @@ export function Navbar() {
         <div className="flex h-16 md:h-20 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-9 h-9 rounded-xl bg-[var(--accent)] flex items-center justify-center text-white font-bold text-lg shadow-sm group-hover:shadow-md group-hover:scale-105 transition-all duration-200">
-              M
-            </div>
+            <img 
+              src="/montgomery-place/images/logo-symbol.png" 
+              alt="Montgomery Place Emblem" 
+              className="w-10 h-10 object-contain group-hover:scale-105 transition-all duration-200"
+            />
             <div className="hidden sm:block">
               <span className="font-heading text-lg font-bold text-[var(--fg)] tracking-tight">
                 {siteConfig.name}

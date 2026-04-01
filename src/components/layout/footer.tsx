@@ -12,9 +12,11 @@ export function Footer() {
             {/* Brand */}
             <div className="lg:col-span-2 space-y-5">
               <Link href="/" className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-[var(--accent)] flex items-center justify-center text-white font-bold text-xl shadow-sm">
-                  M
-                </div>
+                <img 
+                  src="/montgomery-place/images/logo-symbol.png" 
+                  alt="Montgomery Place Logo" 
+                  className="w-12 h-12 object-contain"
+                />
                 <span className="font-heading text-xl font-bold text-white">
                   {siteConfig.name}
                 </span>
