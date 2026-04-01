@@ -25,15 +25,10 @@ export function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <img 
-              src="/montgomery-place/images/logo-symbol.jpg" 
+              src="/montgomery-place/images/logo.jpg" 
               alt="Montgomery Place Emblem" 
-              className="w-10 h-10 object-contain group-hover:scale-105 transition-all duration-200"
+              className="w-auto h-10 object-contain group-hover:scale-105 transition-all duration-200"
             />
-            <div className="hidden sm:block">
-              <span className="font-heading text-lg font-bold text-[var(--fg)] tracking-tight">
-                {siteConfig.name}
-              </span>
-            </div>
           </Link>
 
           {/* Desktop Nav */}
