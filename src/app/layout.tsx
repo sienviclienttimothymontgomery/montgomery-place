@@ -24,6 +24,10 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   description: siteConfig.description,
+  icons: {
+    icon: "/montgomery-place/images/logo-symbol.jpg",
+    apple: "/montgomery-place/images/logo-symbol.jpg",
+  },
   openGraph: {
     title: siteConfig.name,
     description: siteConfig.description,

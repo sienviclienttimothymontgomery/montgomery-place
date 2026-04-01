@@ -11,12 +11,15 @@ export function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
             {/* Brand */}
             <div className="lg:col-span-2 space-y-5">
-              <Link href="/" className="inline-block">
+              <Link href="/" className="flex items-center gap-3">
                 <img 
-                  src="/montgomery-place/images/logo.jpg" 
+                  src="/montgomery-place/images/logo-symbol.jpg" 
                   alt="Montgomery Place Logo" 
-                  className="w-auto h-16 object-contain brightness-0 invert"
+                  className="w-11 h-11 object-contain"
                 />
+                <span className="font-heading text-xl font-bold text-white">
+                  {siteConfig.name}
+                </span>
               </Link>
               <p className="text-sm text-slate-300 max-w-sm leading-relaxed">
                 {siteConfig.description}
