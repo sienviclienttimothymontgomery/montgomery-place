@@ -15,7 +15,8 @@ export default function HomePage() {
       <ProductSpotlights />
       <TeaserSections />
       <EducationHub />
-      <ProductEcosystem />
+      {/* TEMPORARILY HIDDEN — risk of patent disclosure */}
+      {/* <ProductEcosystem /> */}
       <NewsletterSignup />
       <NewsletterPopup />
     </>

@@ -5,10 +5,10 @@ import { ArrowRight, Sparkles } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-gradient-to-br from-[#E0F2F1] via-white to-[#F0F9FF] dark:from-[#0A1A1A] dark:via-[#0A0A0A] dark:to-[#0C1929]">
+    <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-gradient-to-br from-[#E8F1FA] via-white to-[#F2F4F7] dark:from-[#0D1320] dark:via-[#0B0E13] dark:to-[#12151A]">
       {/* Background accents */}
       <div className="absolute top-1/4 right-[15%] w-[500px] h-[500px] bg-[var(--accent)] rounded-full opacity-[0.04] blur-3xl" />
-      <div className="absolute bottom-1/4 left-[10%] w-[400px] h-[400px] bg-teal-400 rounded-full opacity-[0.04] blur-3xl" />
+      <div className="absolute bottom-1/4 left-[10%] w-[400px] h-[400px] bg-sky-400 rounded-full opacity-[0.04] blur-3xl" />
       
       {/* Grid Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] opacity-20 dark:opacity-10" />
@@ -25,11 +25,11 @@ export function Hero() {
             <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] sm:leading-tight">
               <span className="text-slate-900 dark:text-white">Healthier Living,</span>{" "}
               <br className="hidden sm:block" />
-              <span className="bg-gradient-to-r from-[var(--accent)] to-teal-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[var(--accent)] to-sky-400 bg-clip-text text-transparent">
                 At Home
               </span>{" "}
               <span className="text-slate-900 dark:text-white">and</span>{" "}
-              <span className="bg-gradient-to-r from-teal-400 to-[var(--accent)] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-sky-400 to-[var(--accent)] bg-clip-text text-transparent">
                 On the Go
               </span>
             </h1>
@@ -55,7 +55,7 @@ export function Hero() {
 
           {/* Hero Image */}
           <div className="relative mx-auto w-full max-w-lg lg:max-w-none">
-            <div className="absolute inset-0 bg-gradient-to-tr from-[var(--accent)] to-teal-400 rounded-full blur-3xl opacity-20 animate-pulse-slow object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-tr from-[var(--accent)] to-sky-400 rounded-full blur-3xl opacity-20 animate-pulse-slow object-cover" />
             <img 
               src="/montgomery-place/images/products/sleepflow.png" 
               alt="Montgomery Place SleepFlow Oxygent Concentrator" 

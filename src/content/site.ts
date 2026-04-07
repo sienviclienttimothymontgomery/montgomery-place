@@ -50,10 +50,15 @@ export const navLinks: NavLink[] = [
 export const footerLinks = {
   products: [
     { label: "OxiSureTech", href: "/products/oxisuretech" },
-    { label: "GlowSafe", href: "/products/glowsafe" },
-    { label: "ReelAir", href: "/products/reelair" },
-    { label: "FlexCannula", href: "/products/flexcannula" },
-    { label: "All Products", href: "/products" },
+    { label: "Premium Oxygen Tubing - 50 ft", href: "/products/oxisuretech" },
+    { label: "Premium Oxygen Tubing - 50 ft x 2", href: "/products/oxisuretech" },
+    { label: "Premium Oxygen Tubing - 25 ft", href: "/products/oxisuretech" },
+    { label: "Premium Oxygen Tubing - 25 ft x 2", href: "/products/oxisuretech" },
+    // TEMPORARILY HIDDEN — not yet available
+    // { label: "GlowSafe", href: "/products/glowsafe" },
+    // { label: "ReelAir", href: "/products/reelair" },
+    // { label: "FlexCannula", href: "/products/flexcannula" },
+    { label: "All Products", href: "/technology/oxisuretech" },
   ],
   company: [
     { label: "About Us", href: "/about" },

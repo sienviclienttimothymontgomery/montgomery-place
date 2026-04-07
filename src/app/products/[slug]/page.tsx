@@ -37,7 +37,7 @@ export default async function ProductDetailPage({
   const { slug } = await params;
   const product = getProduct(slug);
 
-  if (!product || !product.fullPage) {
+  if (!product || !product.fullPage || product.hidden) {
     notFound();
   }
 

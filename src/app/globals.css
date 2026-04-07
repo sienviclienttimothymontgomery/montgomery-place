@@ -1,28 +1,28 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-brand: #0D6E6E;
-  --color-brand-light: #E0F2F1;
-  --color-brand-dark: #134E4A;
-  --color-brand-accent: #14B8A6;
+  --color-brand: #1A6DB5;
+  --color-brand-light: #E8F1FA;
+  --color-brand-dark: #134D82;
+  --color-brand-accent: #3B9AE1;
 
-  --color-surface: #FAFAFA;
-  --color-surface-dark: #0A0A0A;
+  --color-surface: #F8F9FA;
+  --color-surface-dark: #0B0E13;
   --color-elevated: #FFFFFF;
-  --color-elevated-dark: #171717;
+  --color-elevated-dark: #161A21;
 
-  --color-text-primary: #171717;
-  --color-text-primary-dark: #F5F5F5;
+  --color-text-primary: #1A1D23;
+  --color-text-primary-dark: #F1F2F4;
   --color-text-secondary: #6B7280;
   --color-text-secondary-dark: #9CA3AF;
 
-  --color-border-light: #E5E7EB;
-  --color-border-dark: #2A2A2A;
+  --color-border-light: #E2E5EA;
+  --color-border-dark: #282D36;
 
-  --color-warm-bg: #FFF7ED;
-  --color-warm-bg-dark: #1C1410;
-  --color-cool-bg: #F0F9FF;
-  --color-cool-bg-dark: #0C1929;
+  --color-warm-bg: #F2F4F7;
+  --color-warm-bg-dark: #12151A;
+  --color-cool-bg: #EBF2FA;
+  --color-cool-bg-dark: #0D1320;
 
   --font-heading: var(--font-outfit);
   --font-body: var(--font-inter);
@@ -59,7 +59,7 @@
   --cool-bg: var(--color-cool-bg-dark);
 
   --shadow-diffuse: 0 10px 40px -10px rgba(0, 0, 0, 0.4), 0 1px 3px -1px rgba(0, 0, 0, 0.2);
-  --shadow-diffuse-accent: 0 20px 40px -15px rgba(45, 212, 191, 0.25), 0 0 15px -3px rgba(45, 212, 191, 0.15);
+  --shadow-diffuse-accent: 0 20px 40px -15px rgba(59, 154, 225, 0.25), 0 0 15px -3px rgba(59, 154, 225, 0.15);
 }
 
 /* ── Base styles ── */

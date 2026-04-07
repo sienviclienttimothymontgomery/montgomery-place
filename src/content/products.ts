@@ -20,8 +20,9 @@ export const products: Product[] = [
     icon: "Cpu",
     image: "/montgomery-place/images/products/oxisuretech.png",
     fullPage: true,
-    color: "#0D6E6E",
+    color: "#1A6DB5",
   },
+  // TEMPORARILY HIDDEN — not yet available
   {
     slug: "glowsafe",
     name: "GlowSafe",
@@ -45,7 +46,9 @@ export const products: Product[] = [
     image: "/montgomery-place/images/products/glowsafe.jpg",
     fullPage: true,
     color: "#10B981",
+    hidden: true,
   },
+  // TEMPORARILY HIDDEN — not yet available (Kickstarter)
   {
     slug: "reelair",
     name: "ReelAir",
@@ -68,7 +71,9 @@ export const products: Product[] = [
     icon: "Move",
     fullPage: true,
     color: "#3B82F6",
+    hidden: true,
   },
+  // TEMPORARILY HIDDEN — not yet available
   {
     slug: "flexcannula",
     name: "FlexCannula",
@@ -91,6 +96,7 @@ export const products: Product[] = [
     icon: "Heart",
     fullPage: true,
     color: "#EC4899",
+    hidden: true,
   },
   {
     slug: "sleepflow",
@@ -187,9 +193,14 @@ export function getProduct(slug: string): Product | undefined {
 }
 
 export function getFullPageProducts(): Product[] {
-  return products.filter((p) => p.fullPage);
+  return products.filter((p) => p.fullPage && !p.hidden);
 }
 
 export function getTeaserProducts(): Product[] {
-  return products.filter((p) => !p.fullPage);
+  return products.filter((p) => !p.fullPage && !p.hidden);
+}
+
+/** All visible products (excludes hidden ones) */
+export function getVisibleProducts(): Product[] {
+  return products.filter((p) => !p.hidden);
 }

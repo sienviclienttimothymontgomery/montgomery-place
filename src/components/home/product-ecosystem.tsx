@@ -2,9 +2,10 @@ import { Section, Container } from "@/components/ui/section";
 import { Cpu, Shield, Move, Heart, Moon, Home, Activity, Briefcase, Users } from "lucide-react";
 
 const ecosystemItems = [
-  { name: "GlowSafe", icon: Shield, color: "#10B981", category: "Safety" },
-  { name: "ReelAir", icon: Move, color: "#3B82F6", category: "Mobility" },
-  { name: "FlexCannula", icon: Heart, color: "#EC4899", category: "Comfort" },
+  // TEMPORARILY HIDDEN — not yet available
+  // { name: "GlowSafe", icon: Shield, color: "#10B981", category: "Safety" },
+  // { name: "ReelAir", icon: Move, color: "#3B82F6", category: "Mobility" },
+  // { name: "FlexCannula", icon: Heart, color: "#EC4899", category: "Comfort" },
   { name: "SleepFlow", icon: Moon, color: "#6366F1", category: "Sleep" },
   { name: "AirVista", icon: Home, color: "#8B5CF6", category: "Home" },
   { name: "BreatheActive", icon: Activity, color: "#F59E0B", category: "Wellness" },
@@ -31,7 +32,7 @@ export function ProductEcosystem() {
           {/* Center Hub */}
           <div className="flex justify-center mb-16">
             <div className="relative">
-              <div className="w-36 h-36 md:w-44 md:h-44 rounded-full bg-gradient-to-br from-[var(--accent)] to-teal-400 flex items-center justify-center shadow-[var(--shadow-diffuse-accent)] hover:scale-105 transition-transform duration-500 z-10 relative">
+              <div className="w-36 h-36 md:w-44 md:h-44 rounded-full bg-gradient-to-br from-[var(--accent)] to-sky-400 flex items-center justify-center shadow-[var(--shadow-diffuse-accent)] hover:scale-105 transition-transform duration-500 z-10 relative">
                 <div className="text-center text-white">
                   <Cpu className="w-12 h-12 md:w-14 md:h-14 mx-auto mb-1 drop-shadow-md" />
                   <span className="text-sm md:text-base font-bold drop-shadow-md">OxiSureTech</span>

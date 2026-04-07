@@ -26,7 +26,7 @@ export function Footer() {
               </p>
               <a
                 href={`mailto:${siteConfig.contactEmail}`}
-                className="inline-flex items-center gap-2 text-sm text-[var(--accent)] hover:text-teal-300 transition-colors"
+                className="inline-flex items-center gap-2 text-sm text-[var(--accent)] hover:text-blue-300 transition-colors"
               >
                 <Mail className="w-4 h-4" />
                 {siteConfig.contactEmail}
@@ -40,7 +40,7 @@ export function Footer() {
               </h3>
               <ul className="space-y-3">
                 {footerLinks.products.map((link) => (
-                  <li key={link.href}>
+                  <li key={link.label}>
                     <Link
                       href={link.href}
                       className="text-sm text-slate-300 hover:text-white transition-colors"

@@ -11,6 +11,7 @@ export interface Product {
   gallery?: string[];
   fullPage: boolean;
   color: string;
+  hidden?: boolean;
 }
 
 export type ProductCategory =

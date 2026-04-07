@@ -4,58 +4,59 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Shield, Move, Heart } from "lucide-react";
 
-const spotlights = [
-  {
-    slug: "glowsafe",
-    name: "GlowSafe",
-    tagline: "Intelligent Safety, Always Visible",
-    description:
-      "Ambient LED safety indicators that communicate system status through intuitive color gradients — calm, clear, and integrated into your home aesthetic. No clinical alarms, just ambient intelligence.",
-    category: "Safety Innovation",
-    icon: Shield,
-    color: "#10B981",
-    features: [
-      "Ambient LED status indicators",
-      "Color-coded safety communication",
-      "Night-friendly dimming",
-      "Environmental monitoring",
-    ],
-    reverse: false,
-  },
-  {
-    slug: "reelair",
-    name: "ReelAir",
-    tagline: "Freedom of Movement, Reimagined",
-    description:
-      "A patented retractable tubing system that eliminates tangled lines and restricted movement. Walk freely, sit down without gathering loops, and live without the constant reminder of medical equipment.",
-    category: "Mobility Solution",
-    icon: Move,
-    color: "#3B82F6",
-    features: [
-      "Patented retractable system",
-      "Tangle-free movement",
-      "Lightweight design",
-      "Auto-tension adjustment",
-    ],
-    reverse: true,
-  },
-  {
-    slug: "flexcannula",
-    name: "FlexCannula",
-    tagline: "Comfort You Can Wear All Day",
-    description:
-      "Next-generation nasal cannula engineered with medical-grade silicone and an adaptive flex frame. It conforms to your unique facial geometry, reducing pressure points for all-day, all-night comfort.",
-    category: "Comfort & Wearables",
-    icon: Heart,
-    color: "#EC4899",
-    features: [
-      "Adaptive flex-frame design",
-      "Medical-grade silicone",
-      "Pressure-point-free prongs",
-      "Body-heat responsive fitting",
-    ],
-    reverse: false,
-  },
+// TEMPORARILY HIDDEN — GlowSafe, ReelAir, FlexCannula not yet available
+const spotlights: { slug: string; name: string; tagline: string; description: string; category: string; icon: React.ElementType; color: string; features: string[]; reverse: boolean }[] = [
+  // {
+  //   slug: "glowsafe",
+  //   name: "GlowSafe",
+  //   tagline: "Intelligent Safety, Always Visible",
+  //   description:
+  //     "Ambient LED safety indicators that communicate system status through intuitive color gradients — calm, clear, and integrated into your home aesthetic. No clinical alarms, just ambient intelligence.",
+  //   category: "Safety Innovation",
+  //   icon: Shield,
+  //   color: "#10B981",
+  //   features: [
+  //     "Ambient LED status indicators",
+  //     "Color-coded safety communication",
+  //     "Night-friendly dimming",
+  //     "Environmental monitoring",
+  //   ],
+  //   reverse: false,
+  // },
+  // {
+  //   slug: "reelair",
+  //   name: "ReelAir",
+  //   tagline: "Freedom of Movement, Reimagined",
+  //   description:
+  //     "A patented retractable tubing system that eliminates tangled lines and restricted movement. Walk freely, sit down without gathering loops, and live without the constant reminder of medical equipment.",
+  //   category: "Mobility Solution",
+  //   icon: Move,
+  //   color: "#3B82F6",
+  //   features: [
+  //     "Patented retractable system",
+  //     "Tangle-free movement",
+  //     "Lightweight design",
+  //     "Auto-tension adjustment",
+  //   ],
+  //   reverse: true,
+  // },
+  // {
+  //   slug: "flexcannula",
+  //   name: "FlexCannula",
+  //   tagline: "Comfort You Can Wear All Day",
+  //   description:
+  //     "Next-generation nasal cannula engineered with medical-grade silicone and an adaptive flex frame. It conforms to your unique facial geometry, reducing pressure points for all-day, all-night comfort.",
+  //   category: "Comfort & Wearables",
+  //   icon: Heart,
+  //   color: "#EC4899",
+  //   features: [
+  //     "Adaptive flex-frame design",
+  //     "Medical-grade silicone",
+  //     "Pressure-point-free prongs",
+  //     "Body-heat responsive fitting",
+  //   ],
+  //   reverse: false,
+  // },
 ];
 
 export function ProductSpotlights() {

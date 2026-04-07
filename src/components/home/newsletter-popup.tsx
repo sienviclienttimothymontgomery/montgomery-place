@@ -75,7 +75,7 @@ export function NewsletterPopup() {
           onClick={(e) => e.stopPropagation()}
         >
           {/* Gradient card */}
-          <div className="relative p-8 md:p-10 bg-gradient-to-br from-[var(--accent)] to-teal-700 text-white overflow-hidden">
+          <div className="relative p-8 md:p-10 bg-gradient-to-br from-[var(--accent)] to-blue-800 text-white overflow-hidden">
             {/* Decorative circles */}
             <div className="absolute top-0 right-0 w-48 h-48 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
             <div className="absolute bottom-0 left-0 w-36 h-36 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />

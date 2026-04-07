@@ -1,6 +1,7 @@
+import Link from "next/link";
 import { Section, Container } from "@/components/ui/section";
 import { Badge } from "@/components/ui/badge";
-import { Moon, Home, Activity } from "lucide-react";
+import { Moon, Home, Activity, Package } from "lucide-react";
 
 const teasers = [
   {
@@ -22,6 +23,18 @@ const teasers = [
     image: "/montgomery-place/images/products/airvista.png",
     color: "#8B5CF6",
     category: "Home Environment",
+  },
+  {
+    name: "Premium Oxygen Tubing - 25 ft",
+    tagline: "Compact, kink-resistant tubing for smaller spaces",
+    description:
+      "Our 25 ft Premium Oxygen Tubing delivers the same six-channel, kink-resistant performance in a shorter length — ideal for single-room use, travel, or as a convenient backup.",
+    icon: Package,
+    image: "/montgomery-place/images/products/oxisuretech.png",
+    color: "#1A6DB5",
+    category: "OxiSureTech Tubing",
+    href: "/products/oxisuretech",
+    available: true,
   },
   {
     name: "BreatheActive",
@@ -49,62 +62,81 @@ export function TeaserSections() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          {teasers.map((product) => (
-            <div
-              key={product.name}
-              className="relative p-8 rounded-3xl bg-[var(--bg-elevated)] border border-[var(--border)] space-y-5 overflow-hidden hover:shadow-[var(--shadow-diffuse)] transition-all duration-500 hover:-translate-y-1 z-10 group"
-            >
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {teasers.map((product) => {
+            const card = (
               <div
-                className="absolute top-0 left-0 right-0 h-1.5 rounded-t-3xl"
-                style={{
-                  background: `linear-gradient(to right, ${product.color}, ${product.color}80)`,
-                }}
-              />
-              {product.image ? (
-                <div className="relative h-48 -mx-8 -mt-8 mb-6 overflow-hidden rounded-t-3xl">
-                  <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-elevated)] to-transparent z-10" />
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                </div>
-              ) : null}
-              
-              <div className="flex items-center gap-4 pt-2">
-                {!product.image && (
-                  <div
-                    className="w-14 h-14 rounded-2xl flex items-center justify-center"
-                    style={{ backgroundColor: `${product.color}12` }}
-                  >
-                    <product.icon
-                      className="w-7 h-7"
-                      style={{ color: product.color }}
+                className="relative flex flex-col rounded-3xl bg-[var(--bg-elevated)] border border-[var(--border)] overflow-hidden hover:shadow-[var(--shadow-diffuse)] transition-all duration-500 hover:-translate-y-1 z-10 group h-full"
+              >
+                <div
+                  className="absolute top-0 left-0 right-0 h-1.5 rounded-t-3xl z-20"
+                  style={{
+                    background: `linear-gradient(to right, ${product.color}, ${product.color}80)`,
+                  }}
+                />
+                {/* Image section */}
+                {product.image ? (
+                  <div className="relative h-44 overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-elevated)] to-transparent z-10" />
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                     />
                   </div>
-                )}
-                <div>
-                  <h3 className="font-heading text-xl font-bold text-[var(--fg)]">
-                    {product.name}
-                  </h3>
-                  <span className="text-xs text-[var(--fg-secondary)] uppercase tracking-wider font-medium">
-                    {product.category}
-                  </span>
+                ) : null}
+
+                {/* Content section */}
+                <div className="flex flex-col flex-1 p-6 space-y-4">
+                  <div className="flex items-center gap-3">
+                    {!product.image && (
+                      <div
+                        className="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0"
+                        style={{ backgroundColor: `${product.color}12` }}
+                      >
+                        <product.icon
+                          className="w-6 h-6"
+                          style={{ color: product.color }}
+                        />
+                      </div>
+                    )}
+                    <div>
+                      <h3 className="font-heading text-lg font-bold text-[var(--fg)] leading-tight">
+                        {product.name}
+                      </h3>
+                      <span className="text-xs text-[var(--fg-secondary)] uppercase tracking-wider font-medium">
+                        {product.category}
+                      </span>
+                    </div>
+                  </div>
+                  <p
+                    className="text-sm font-medium leading-snug"
+                    style={{ color: product.color }}
+                  >
+                    {product.tagline}
+                  </p>
+                  <p className="text-sm text-[var(--fg-secondary)] leading-relaxed flex-1">
+                    {product.description}
+                  </p>
+                  <div className="pt-1">
+                    {product.available ? (
+                      <Badge className="bg-[#1A6DB5] text-white border-[#1A6DB5]">Available Now</Badge>
+                    ) : (
+                      <Badge variant="outline">Coming Soon</Badge>
+                    )}
+                  </div>
                 </div>
               </div>
-              <p
-                className="text-sm font-medium"
-                style={{ color: product.color }}
-              >
-                {product.tagline}
-              </p>
-              <p className="text-sm text-[var(--fg-secondary)] leading-relaxed">
-                {product.description}
-              </p>
-              <Badge variant="outline">Coming Soon</Badge>
-            </div>
-          ))}
+            );
+
+            return product.href ? (
+              <Link key={product.name} href={product.href} className="block h-full">
+                {card}
+              </Link>
+            ) : (
+              <div key={product.name} className="h-full">{card}</div>
+            );
+          })}
         </div>
       </Container>
     </Section>
