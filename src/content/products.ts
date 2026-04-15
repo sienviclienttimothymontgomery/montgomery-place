@@ -98,59 +98,7 @@ export const products: Product[] = [
     color: "#EC4899",
     hidden: true,
   },
-  {
-    slug: "sleepflow",
-    name: "SleepFlow",
-    tagline: "Breathe Better, Sleep Deeper",
-    description:
-      "SleepFlow is Montgomery Place's overnight oxygen therapy system. Designed specifically for nighttime use, SleepFlow combines whisper-quiet operation with intelligent flow adjustment to support restful, uninterrupted sleep.",
-    features: [
-      "Ultra-quiet nighttime operation",
-      "Sleep-optimized flow patterns",
-      "Morning wellness reports",
-      "Compatible with CPAP systems",
-    ],
-    category: "sleep",
-    icon: "Moon",
-    image: "/montgomery-place/images/products/sleepflow.png",
-    fullPage: false,
-    color: "#6366F1",
-  },
-  {
-    slug: "airvista",
-    name: "AirVista",
-    tagline: "Your Home Air Quality Command Center",
-    description:
-      "AirVista is Montgomery Place's whole-home air quality monitoring and optimization hub. It tracks particulates, humidity, VOCs, and oxygen levels to maintain the ideal respiratory environment throughout your living space.",
-    features: [
-      "Multi-room air quality monitoring",
-      "Particulate and VOC tracking",
-      "Humidity optimization",
-      "Smart ventilation recommendations",
-    ],
-    category: "home",
-    icon: "Home",
-    image: "/montgomery-place/images/products/airvista.png",
-    fullPage: false,
-    color: "#8B5CF6",
-  },
-  {
-    slug: "breatheactive",
-    name: "BreatheActive",
-    tagline: "Stay Active, Stay Confident",
-    description:
-      "BreatheActive is Montgomery Place's activity-focused respiratory companion. Designed for exercise, rehabilitation, and daily movement, BreatheActive adapts oxygen delivery to your activity level in real time.",
-    features: [
-      "Activity-responsive flow adjustment",
-      "Exercise performance tracking",
-      "Rehabilitation program support",
-      "Lightweight active design",
-    ],
-    category: "wellness",
-    icon: "Activity",
-    fullPage: false,
-    color: "#F59E0B",
-  },
+
   {
     slug: "gooxi",
     name: "GoOxi",

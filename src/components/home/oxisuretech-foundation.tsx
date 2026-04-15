@@ -6,23 +6,23 @@ import { Cpu, ArrowRight, Zap, Shield, Wifi, BarChart3 } from "lucide-react";
 const features = [
   {
     icon: Zap,
-    title: "Adaptive Flow",
-    description: "Intelligent oxygen delivery that adjusts to your needs in real time",
+    title: "Adaptive Oxygen Delivery",
+    description: "Intelligent oxygen delivery that adjusts to your precise needs in real time",
   },
   {
     icon: Shield,
-    title: "Safety First",
-    description: "Continuous monitoring with multi-layer safety protocols",
+    title: "Continuous Safety Monitoring",
+    description: "Real-time monitoring with multi-layer safety protocols and ambient awareness",
   },
   {
     icon: Wifi,
-    title: "Connected",
-    description: "Seamless interoperability across every Montgomery Place product",
+    title: "Cross-Device Integration",
+    description: "Seamless interoperability across the Montgomery Place ecosystem and existing devices",
   },
   {
     icon: BarChart3,
-    title: "Smart Analytics",
-    description: "Usage insights that help optimize your wellness routine",
+    title: "Usage Intelligence",
+    description: "Advanced system insights that help optimize daily operational wellness",
   },
 ];
 
@@ -46,6 +46,11 @@ export function OxiSureTechFoundation() {
               backbone powering every product in the Montgomery Place ecosystem.
               It combines advanced oxygen delivery optimization, real-time
               monitoring, and adaptive flow management.
+            </p>
+            <p className="text-lg text-[var(--fg-secondary)] leading-relaxed font-medium">
+              OxiSureTech is designed to work across devices — including existing
+              respiratory systems — enhancing performance, safety, and usability
+              through a unified intelligence layer.
             </p>
             <Link href="/technology/oxisuretech">
               <Button className="rounded-2xl">

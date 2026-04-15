@@ -15,6 +15,7 @@ export default function ContactPage() {
     name: "",
     email: "",
     phone: "",
+    inquiryType: "patient",
     subject: "",
     message: "",
   });
@@ -50,9 +51,8 @@ export default function ContactPage() {
                 <h1 className="font-heading text-5xl md:text-6xl font-bold text-[var(--fg)] tracking-tight">
                   Contact <span className="text-[var(--accent)]">Us</span>
                 </h1>
-                <p className="text-lg text-[var(--fg-secondary)]">
-                  Have questions about our products, technology, or partnerships?
-                  We&apos;d love to hear from you.
+                <p className="text-lg text-[var(--fg-secondary)] leading-relaxed">
+                  We welcome inquiries from patients, caregivers, professionals, and partners interested in advancing respiratory care.
                 </p>
               </div>
 
@@ -67,7 +67,22 @@ export default function ContactPage() {
                   </p>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-5">
+                <div className="space-y-6">
+                  <div className="grid sm:grid-cols-3 gap-4 mb-4">
+                    <div className="p-4 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border)]">
+                      <p className="text-sm font-bold text-[var(--accent)] mb-1">Patients</p>
+                      <p className="text-xs text-[var(--fg-secondary)]">Questions, support, or ecosystem interest</p>
+                    </div>
+                    <div className="p-4 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border)]">
+                      <p className="text-sm font-bold text-[var(--accent)] mb-1">Professionals</p>
+                      <p className="text-xs text-[var(--fg-secondary)]">Therapists, doctors, and advisors</p>
+                    </div>
+                    <div className="p-4 rounded-xl bg-[var(--bg-elevated)] border border-[var(--border)]">
+                      <p className="text-sm font-bold text-[var(--accent)] mb-1">Partners</p>
+                      <p className="text-xs text-[var(--fg-secondary)]">Integration and technology collaborations</p>
+                    </div>
+                  </div>
+                  <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="grid sm:grid-cols-2 gap-5">
                     <Input
                       id="name"
@@ -86,6 +101,19 @@ export default function ContactPage() {
                       value={form.email}
                       onChange={(e) => setForm({ ...form, email: e.target.value })}
                     />
+                  </div>
+                  <div className="space-y-1.5 pt-1">
+                    <label className="text-sm font-medium text-[var(--fg)] ml-1">Inquiry Type</label>
+                    <select 
+                      value={form.inquiryType}
+                      onChange={(e) => setForm({ ...form, inquiryType: e.target.value })}
+                      className="flex h-11 w-full rounded-xl border border-[var(--border)] bg-transparent px-3 py-2 text-sm text-[var(--fg)] focus:outline-none focus:ring-2 focus:ring-[var(--accent)]/50 transition-colors"
+                    >
+                      <option value="patient">Patient or Caregiver</option>
+                      <option value="professional">Medical Professional</option>
+                      <option value="partner">Integration / Tech Partner</option>
+                      <option value="other">Other Inquiry</option>
+                    </select>
                   </div>
                   <div className="grid sm:grid-cols-2 gap-5">
                     <Input
@@ -115,10 +143,11 @@ export default function ContactPage() {
                     onChange={(e) => setForm({ ...form, message: e.target.value })}
                   />
                   <Button type="submit" size="lg" disabled={loading} className="w-full sm:w-auto">
-                    {loading ? "Sending..." : "Send Message"}
+                    {loading ? "Sending..." : "Start the Conversation"}
                     <Send className="w-4 h-4 ml-2" />
                   </Button>
                 </form>
+                </div>
               )}
             </div>
 
@@ -158,9 +187,8 @@ export default function ContactPage() {
                   Response Time
                 </h3>
                 <p className="text-sm text-[var(--fg-secondary)] leading-relaxed">
-                  We typically respond to inquiries within 1–2 business days.
-                  For urgent matters, please include &ldquo;URGENT&rdquo; in your subject
-                  line.
+                  We are actively working with partners and professionals to expand and refine the Montgomery Place ecosystem. We typically respond to all inquiries within 24–48 hours. 
+                  For urgent matters, please include &ldquo;URGENT&rdquo; in your subject line.
                 </p>
               </div>
             </div>

@@ -9,10 +9,10 @@ export const metadata: Metadata = {
 };
 
 const stats = [
-  { value: "24/7", label: "Intelligent Monitoring", desc: "OxiSureTech never stops working to keep you safe." },
-  { value: "100%", label: "Home Integrated", desc: "Products designed to blend into your living space." },
-  { value: "8+", label: "Product Lines", desc: "A growing ecosystem of wellness solutions." },
-  { value: "∞", label: "Commitment", desc: "An endless drive to improve respiratory care." },
+  { value: "24/7", label: "Continuous Monitoring", desc: "OxiSureTech provides uninterrupted system awareness." },
+  { value: "100%", label: "Home Integrated", desc: "Designed specifically for daily living environments." },
+  { value: "8+", label: "Ecosystem Nodes", desc: "A connected, expanding approach to respiratory support." },
+  { value: "Yr 1", label: "Long-Term Innovation", desc: "An ongoing commitment to improving system behavior." },
 ];
 
 export default function ImpactPage() {
@@ -26,9 +26,10 @@ export default function ImpactPage() {
               Making a <span className="text-[var(--accent)]">Difference</span>
             </h1>
             <p className="text-xl text-[var(--fg-secondary)] leading-relaxed">
-              At Montgomery Place, impact isn&apos;t just about numbers — it&apos;s about
-              the daily moments when our products make breathing easier, living
-              more comfortable, and wellness more accessible.
+              At Montgomery Place, impact isn&apos;t an abstract philosophy — it&apos;s about 
+              how our system changes real-world respiratory care. It&apos;s about reducing 
+              daily friction, adapting to changing environments, and improving how 
+              connected devices perform in your home.
             </p>
           </div>
         </Container>
@@ -52,10 +53,10 @@ export default function ImpactPage() {
         <Container size="md">
           <div className="grid md:grid-cols-2 gap-8">
             {[
-              { icon: TrendingUp, title: "Advancing Technology", desc: "Our OxiSureTech platform continues to evolve, bringing new capabilities and intelligence to every product in our ecosystem. Each update makes the entire system smarter and safer." },
-              { icon: Globe, title: "Expanding Access", desc: "We're committed to making premium respiratory care accessible to more people. Our products are designed to be approachable and intuitive, removing barriers to better breathing." },
-              { icon: Users, title: "Supporting Caregivers", desc: "Montgomery Place products aren't just for patients — they're designed to give caregivers peace of mind through connected monitoring, clear status indicators, and reliable operation." },
-              { icon: Heart, title: "Improving Daily Life", desc: "Every feature, every design choice, every technical decision is measured against one question: does this make someone's daily life genuinely better?" },
+              { icon: TrendingUp, title: "Advancing Technology", desc: "Our OxiSureTech platform continuously learns, adapts, and improves across connected devices. The entire ecosystem works together to raise the standard of safety and performance." },
+              { icon: Globe, title: "Expanding Access", desc: "We reduce the barriers to respiratory care through seamless integration and usability. By simplifying disjointed systems, we make advanced functionality naturally accessible at home." },
+              { icon: Users, title: "Supporting Caregivers", desc: "Our connected ecosystem provides caregivers with unprecedented visibility and system awareness. By offering real-time reassurance, we reduce the ambient anxiety of continuous home care." },
+              { icon: Heart, title: "Improving Daily Life", desc: "We measure impact by friction reduction. By integrating intelligence across systems — including those already in use — we make daily respiratory care more reliable, comfortable, and intuitive." },
             ].map((item, i) => (
               <div key={i} className="p-8 rounded-2xl bg-[var(--bg-elevated)] border border-[var(--border)] space-y-4">
                 <item.icon className="w-10 h-10 text-[var(--accent)]" />

@@ -49,16 +49,9 @@ export const navLinks: NavLink[] = [
 
 export const footerLinks = {
   products: [
-    { label: "OxiSureTech", href: "/products/oxisuretech" },
-    { label: "Premium Oxygen Tubing - 50 ft", href: "/products/oxisuretech" },
-    { label: "Premium Oxygen Tubing - 50 ft x 2", href: "/products/oxisuretech" },
-    { label: "Premium Oxygen Tubing - 25 ft", href: "/products/oxisuretech" },
-    { label: "Premium Oxygen Tubing - 25 ft x 2", href: "/products/oxisuretech" },
-    // TEMPORARILY HIDDEN — not yet available
-    // { label: "GlowSafe", href: "/products/glowsafe" },
-    // { label: "ReelAir", href: "/products/reelair" },
-    // { label: "FlexCannula", href: "/products/flexcannula" },
-    { label: "All Products", href: "/technology/oxisuretech" },
+    { label: "The Ecosystem", href: "/products" },
+    { label: "OxiSureTech Platform", href: "/technology/oxisuretech" },
+    { label: "Premium Tubing", href: "/products/oxisuretech" },
   ],
   company: [
     { label: "About Us", href: "/about" },
@@ -69,9 +62,8 @@ export const footerLinks = {
   ],
   resources: [
     { label: "Education", href: "/education" },
-    { label: "OxiSureTech Technology", href: "/technology/oxisuretech" },
     { label: "Respiratory Innovation", href: "/innovation" },
-    { label: "Sleep Therapy", href: "/sleep-therapy" },
+    { label: "Sleep Wellness", href: "/sleep-therapy" },
     { label: "Mobility Solutions", href: "/mobility-solutions" },
   ],
   legal: [

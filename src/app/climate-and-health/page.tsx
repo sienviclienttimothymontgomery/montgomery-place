@@ -21,10 +21,7 @@ export default function ClimateHealthPage() {
               Climate and <span className="text-[var(--accent)]">Respiratory Health</span>
             </h1>
             <p className="text-xl text-[var(--fg-secondary)] leading-relaxed">
-              Climate change is a respiratory health issue. Rising temperatures,
-              worsening air quality, and increasing wildfire smoke are creating
-              new challenges for everyone — especially those who rely on
-              supplemental oxygen.
+              Climate change is a respiratory health issue. As environments become more unpredictable, stagnant systems fall short. The Montgomery Place ecosystem is designed to respond to these environmental changes in real time, maintaining reliability when it matters most.
             </p>
           </div>
         </Container>
@@ -34,10 +31,10 @@ export default function ClimateHealthPage() {
         <Container>
           <div className="grid md:grid-cols-2 gap-8">
             {[
-              { icon: CloudRain, title: "Air Quality Challenges", desc: "Climate change is increasing the frequency and severity of poor air quality events. Wildfire smoke, ground-level ozone, and particulate matter are making outdoor air less safe for respiratory patients. Montgomery Place products like AirVista are designed to monitor and respond to these environmental changes." },
-              { icon: Thermometer, title: "Temperature Extremes", desc: "Extreme heat and cold both affect respiratory function and oxygen delivery efficiency. OxiSureTech's adaptive algorithms account for environmental temperature changes, ensuring consistent performance regardless of conditions." },
-              { icon: Wind, title: "Indoor Air Matters", desc: "As outdoor air quality worsens, the air inside our homes becomes even more important. Montgomery Place is developing products that not only deliver oxygen but also monitor and improve your indoor air environment." },
-              { icon: Leaf, title: "Sustainable Design", desc: "We believe in building products that are part of the solution, not the problem. Our engineering priorities include energy efficiency, durable materials that reduce waste, and modular designs that extend product life." },
+              { icon: CloudRain, title: "Air Quality Response", desc: "As poor air quality events increase, passive systems are no longer enough. The OxiSureTech ecosystem monitors environmental shifts to provide real-time response." },
+              { icon: Thermometer, title: "Temperature Extremes", desc: "Extreme temperatures compromise standard oxygen delivery efficiency. OxiSureTech utilizes adaptive system behavior to maintain consistent respiratory support regardless of changing external conditions." },
+              { icon: Wind, title: "The Home as a Hub", desc: "As outdoor air worsens, indoor air intelligence becomes critical. Our ecosystem integrates your home environment into your care, creating a reliable, integrated sanctuary." },
+              { icon: Leaf, title: "Engineered Durability", desc: "We believe in sustainable engineering. By prioritizing energy efficiency, modular components, and long-lasting system architecture, we build resilient tools meant to endure." },
             ].map((item, i) => (
               <div key={i} className="p-8 rounded-2xl bg-[var(--bg)] border border-[var(--border)] space-y-4">
                 <item.icon className="w-10 h-10 text-[var(--accent)]" />
@@ -56,9 +53,7 @@ export default function ClimateHealthPage() {
               Building for a Changing World
             </h2>
             <p className="text-lg text-[var(--fg-secondary)] leading-relaxed">
-              Montgomery Place is committed to creating products that help people
-              breathe better — no matter what the environment throws at them.
-              Climate-aware design is built into everything we make.
+              Montgomery Place is building connected systems designed to operate reliably in increasingly unpredictable environments. By integrating environmental intelligence into the core of OxiSureTech, we create a more resilient approach to respiratory care.
             </p>
             <Link href="/products">
               <Button size="lg">Explore Our Solutions <ArrowRight className="w-5 h-5 ml-2" /></Button>

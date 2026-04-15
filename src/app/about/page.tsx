@@ -22,8 +22,7 @@ export default function AboutPage() {
             </h1>
             <p className="text-xl text-[var(--fg-secondary)] leading-relaxed">
               Montgomery Place LLC was founded with a simple but ambitious goal:
-              to transform respiratory care from a clinical burden into a
-              seamless part of healthy living.
+              to build the intelligent, connected ecosystem that the future of respiratory care will run on.
             </p>
           </div>
         </Container>
@@ -40,11 +39,10 @@ export default function AboutPage() {
               they deserve better.
             </p>
             <p className="text-lg text-[var(--fg-secondary)] leading-relaxed">
-              Montgomery Place creates respiratory health and home wellness
-              products that people are proud to use — products that integrate
-              naturally into homes and lifestyles, that feel premium and
-              thoughtful, and that work intelligently to deliver better outcomes
-              with less friction.
+              Montgomery Place creates an intelligent respiratory ecosystem — integrating
+              system awareness and adaptive functionality across existing devices and our own premium hardware. 
+              We build platforms that work intelligently to deliver better clinical outcomes 
+              with significantly less daily friction. We are building the infrastructure, not just the accessories.
             </p>
           </div>
         </Container>
@@ -54,10 +52,10 @@ export default function AboutPage() {
         <Container>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: Heart, title: "Human First", desc: "Every decision starts with the people who use our products." },
-              { icon: Sparkles, title: "Design Excellence", desc: "Premium aesthetics that integrate beautifully into homes." },
-              { icon: Target, title: "Precision", desc: "Engineering standards that prioritize safety and comfort." },
-              { icon: Users, title: "Community", desc: "Built with and for the respiratory care community." },
+              { icon: Heart, title: "Human First", desc: "Every decision starts with real patient experience and clinical awareness." },
+              { icon: Sparkles, title: "Ecosystem Design", desc: "A connected approach that integrates seamlessly with existing respiratory devices." },
+              { icon: Target, title: "Engineering Precision", desc: "Rigorous standards prioritizing system reliability, safety, and continuous monitoring." },
+              { icon: Users, title: "Collaborative Care", desc: "Built with ongoing input from the patient, caregiver, and professional respiratory community." },
             ].map((item, i) => (
               <div key={i} className="text-center p-8 rounded-2xl bg-[var(--bg-elevated)] border border-[var(--border)] space-y-4">
                 <item.icon className="w-10 h-10 text-[var(--accent)] mx-auto" />
@@ -65,6 +63,20 @@ export default function AboutPage() {
                 <p className="text-sm text-[var(--fg-secondary)]">{item.desc}</p>
               </div>
             ))}
+          </div>
+        </Container>
+      </Section>
+
+      <Section variant="default">
+        <Container size="md">
+          <div className="space-y-6 text-center">
+            <h2 className="font-heading text-3xl font-bold text-[var(--fg)]">The OxiSureTech Ecosystem</h2>
+            <p className="text-lg text-[var(--fg-secondary)] leading-relaxed max-w-2xl mx-auto">
+              We understand that true innovation doesn&apos;t mean replacing everything you already own. 
+              The Montgomery Place ecosystem is powered by OxiSureTech — an intelligence layer designed to work with what already exists. 
+              By connecting to your current CPAP machine or oxygen delivery system, we enhance performance, safety, and usability. 
+              We are not replacing your care; we are elevating it.
+            </p>
           </div>
         </Container>
       </Section>

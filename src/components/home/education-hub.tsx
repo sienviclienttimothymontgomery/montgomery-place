@@ -38,7 +38,8 @@ export function EducationHub() {
           </h2>
           <p className="text-lg text-[var(--fg-secondary)] max-w-2xl mx-auto">
             Explore our growing library of resources on respiratory health, home
-            wellness, and the science behind OxiSureTech.
+            wellness, and the science behind OxiSureTech. Understanding how 
+            respiratory systems work together is the first step to better care.
           </p>
         </div>
 

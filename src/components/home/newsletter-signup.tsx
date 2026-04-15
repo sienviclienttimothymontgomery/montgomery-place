@@ -44,11 +44,11 @@ export function NewsletterSignup() {
 
           <div className="relative space-y-6 text-center">
             <h2 className="font-heading text-3xl md:text-4xl font-bold">
-              Stay Connected with Montgomery Place
+              Join Early Access to New Ecosystem Innovations
             </h2>
             <p className="text-white/80 text-lg max-w-xl mx-auto">
-              Get the latest updates on our products, respiratory wellness tips,
-              and exclusive early access to new innovations.
+              Get the latest updates on connected respiratory care, system intelligence,
+              and exclusive access to the growing OxiSureTech ecosystem.
             </p>
 
             {submitted ? (

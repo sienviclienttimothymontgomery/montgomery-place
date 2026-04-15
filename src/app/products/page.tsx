@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { products, getFullPageProducts, getTeaserProducts } from "@/content/products";
+import { products, getFullPageProducts } from "@/content/products";
 import { Section, Container } from "@/components/ui/section";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Cpu, Shield, Move, Heart, Moon, Home, Activity, Briefcase, Users } from "lucide-react";
@@ -16,7 +16,6 @@ const iconMap: Record<string, React.ElementType> = {
 
 export default function ProductsPage() {
   const fullProducts = getFullPageProducts();
-  const teaserProducts = getTeaserProducts();
 
   return (
     <>
@@ -101,23 +100,27 @@ export default function ProductsPage() {
         </Container>
       </Section>
 
-      {/* Teaser Products */}
+      {/* Ecosystem Expansions */}
       <Section>
         <Container>
           <div className="text-center mb-12 space-y-4">
             <h2 className="font-heading text-3xl font-bold text-[var(--fg)]">
-              Coming Soon
+              Expanding the Ecosystem
             </h2>
             <p className="text-[var(--fg-secondary)] max-w-xl mx-auto">
-              More OxiSureTech-powered products are in active development.
+              We are actively developing new ways to integrate the OxiSureTech ecosystem into every aspect of daily life.
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {teaserProducts.map((product) => {
-              const Icon = iconMap[product.icon] || Cpu;
+            {[
+              { category: "Sleep Wellness", icon: Moon, color: "#6366F1", tagline: "Intelligent overnight therapy" },
+              { category: "Home Environment", icon: Home, color: "#8B5CF6", tagline: "Total home air intelligence" },
+              { category: "Mobility Solutions", icon: Move, color: "#F59E0B", tagline: "Unrestricted active support" },
+            ].map((product, i) => {
+              const Icon = product.icon;
               return (
                 <div
-                  key={product.slug}
+                  key={i}
                   className="relative p-6 rounded-2xl bg-[var(--bg-elevated)] border border-[var(--border)] space-y-4 overflow-hidden"
                 >
                   <div
@@ -131,13 +134,13 @@ export default function ProductsPage() {
                     >
                       <Icon className="w-5 h-5" style={{ color: product.color }} />
                     </div>
-                    <h3 className="font-heading text-lg font-bold text-[var(--fg)]">{product.name}</h3>
+                    <h3 className="font-heading text-lg font-bold text-[var(--fg)]">{product.category}</h3>
                   </div>
                   <p className="text-sm text-[var(--accent)] font-medium">{product.tagline}</p>
                   <p className="text-sm text-[var(--fg-secondary)] leading-relaxed">
-                    {product.description}
+                    Designed to integrate seamlessly with the growing OxiSureTech ecosystem.
                   </p>
-                  <Badge variant="outline">Coming Soon</Badge>
+                  <Badge variant="outline">In Development</Badge>
                 </div>
               );
             })}

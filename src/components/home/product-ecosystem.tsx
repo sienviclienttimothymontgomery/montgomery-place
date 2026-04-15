@@ -2,13 +2,9 @@ import { Section, Container } from "@/components/ui/section";
 import { Cpu, Shield, Move, Heart, Moon, Home, Activity, Briefcase, Users } from "lucide-react";
 
 const ecosystemItems = [
-  // TEMPORARILY HIDDEN — not yet available
-  // { name: "GlowSafe", icon: Shield, color: "#10B981", category: "Safety" },
-  // { name: "ReelAir", icon: Move, color: "#3B82F6", category: "Mobility" },
-  // { name: "FlexCannula", icon: Heart, color: "#EC4899", category: "Comfort" },
-  { name: "SleepFlow", icon: Moon, color: "#6366F1", category: "Sleep" },
-  { name: "AirVista", icon: Home, color: "#8B5CF6", category: "Home" },
-  { name: "BreatheActive", icon: Activity, color: "#F59E0B", category: "Wellness" },
+  { name: "GlowSafe", icon: Shield, color: "#10B981", category: "Safety" },
+  { name: "ReelAir", icon: Move, color: "#3B82F6", category: "Mobility" },
+  { name: "FlexCannula", icon: Heart, color: "#EC4899", category: "Comfort" },
   { name: "GoOxi", icon: Briefcase, color: "#EF4444", category: "Portable" },
   { name: "CareDock", icon: Users, color: "#06B6D4", category: "Connected" },
 ];
@@ -23,7 +19,7 @@ export function ProductEcosystem() {
           </h2>
           <p className="text-lg text-[var(--fg-secondary)] max-w-2xl mx-auto leading-relaxed">
             Every Montgomery Place product is designed to integrate seamlessly with 
-            OxiSureTech Premium Tubing, creating a flawless, kink-resistant oxygen delivery experience.
+            Premium Oxygen Tubing. Available in multiple configurations.
           </p>
         </div>
 
@@ -43,7 +39,7 @@ export function ProductEcosystem() {
           </div>
 
           {/* Product Nodes */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-5 md:gap-6 stagger-children">
+          <div className="flex flex-wrap justify-center gap-5 md:gap-6 stagger-children max-w-3xl mx-auto">
             {ecosystemItems.map((item) => (
               <div
                 key={item.name}

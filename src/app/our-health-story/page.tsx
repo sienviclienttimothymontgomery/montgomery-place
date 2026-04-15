@@ -21,10 +21,7 @@ export default function OurHealthStoryPage() {
               We Use <span className="text-[var(--accent)]">Our Own Products</span>
             </h1>
             <p className="text-xl text-[var(--fg-secondary)] leading-relaxed">
-              At Montgomery Place, respiratory wellness isn&apos;t abstract — it&apos;s
-              personal. Members of our team use OxiSureTech products in their
-              own homes, for their own health. This page shares why that
-              matters.
+              Montgomery Place was built from firsthand experience with the limitations of existing respiratory care. The problem wasn&apos;t just individual devices — it was the lack of a connected system. We experienced this failure, so we built something better.
             </p>
           </div>
         </Container>
@@ -38,22 +35,13 @@ export default function OurHealthStoryPage() {
             </h2>
             <div className="space-y-6 text-lg text-[var(--fg-secondary)] leading-relaxed">
               <p>
-                The best products come from people who understand the problem
-                firsthand. Several members of the Montgomery Place team live
-                with respiratory conditions or care for family members who do.
-                This isn&apos;t just a business — it&apos;s a deeply personal mission.
+                Living with traditional respiratory equipment revealed a fundamental truth: devices don&apos;t work together, and home use is entirely different from clinical assumptions. The daily friction of fragmented systems led to a clear realization — building better individual products wasn&apos;t enough; we needed a connected approach.
               </p>
               <p>
-                When we test a new FlexCannula design, we wear it ourselves for
-                days. When we adjust GlowSafe&apos;s notification thresholds, we do it
-                in our own living rooms. When we evaluate ReelAir&apos;s retractable
-                mechanism, we walk our own hallways.
+                This realization became our turning point. We shifted from frustrated patients to system builders. We created OxiSureTech as the intelligence layer to weave disjointed devices into a cohesive respiratory ecosystem.
               </p>
               <p>
-                This firsthand experience drives a level of quality and
-                thoughtfulness that no amount of market research can replicate.
-                We build products we trust enough to use ourselves — and we
-                believe you&apos;ll feel the difference.
+                Today, that firsthand experience is amplified through continuous collaboration. Clinical validation from healthcare professionals and ongoing feedback loops with fellow patients ensure that every decision we make remains fiercely rooted in practical, real-world necessity.
               </p>
             </div>
           </div>
@@ -64,9 +52,9 @@ export default function OurHealthStoryPage() {
         <Container>
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { icon: Heart, title: "Real Testing", desc: "Our products are tested in real homes by the people who build them — not just in laboratories." },
-              { icon: Star, title: "Genuine Feedback", desc: "Internal users provide honest, unfiltered feedback that shapes every improvement and update." },
-              { icon: Coffee, title: "Daily Use", desc: "We don't just test products — we live with them. Every day. That's how we know they're right." },
+              { icon: Heart, title: "Patient Feedback Loops", desc: "Continuous patient insight directly informs system design and usability." },
+              { icon: Star, title: "Caregiver Insights", desc: "Real-world observations from daily home care situations drive safety innovations." },
+              { icon: Coffee, title: "Clinician Validation", desc: "Professional medical input ensures our connected ecosystem matches clinical rigor." },
             ].map((item, i) => (
               <div key={i} className="text-center p-8 rounded-2xl bg-[var(--bg-elevated)] border border-[var(--border)] space-y-4">
                 <item.icon className="w-10 h-10 text-[var(--accent)] mx-auto" />
