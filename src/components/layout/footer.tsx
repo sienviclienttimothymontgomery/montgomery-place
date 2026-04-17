@@ -13,7 +13,7 @@ export function Footer() {
             <div className="lg:col-span-2 space-y-5">
               <Link href="/" className="flex items-center gap-3">
                 <img 
-                  src="/montgomery-place/images/logo-symbol.jpg" 
+                  src="/images/logo-symbol.jpg" 
                   alt="Montgomery Place Logo" 
                   className="w-11 h-11 object-contain"
                 />

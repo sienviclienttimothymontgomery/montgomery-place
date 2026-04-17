@@ -25,8 +25,8 @@ export const metadata: Metadata = {
   },
   description: siteConfig.description,
   icons: {
-    icon: "/montgomery-place/images/logo-symbol.jpg",
-    apple: "/montgomery-place/images/logo-symbol.jpg",
+    icon: "/images/logo-symbol.jpg",
+    apple: "/images/logo-symbol.jpg",
   },
   openGraph: {
     title: siteConfig.name,

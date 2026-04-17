@@ -25,7 +25,7 @@ export function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <img 
-              src="/montgomery-place/images/logo-symbol.jpg" 
+              src="/images/logo-symbol.jpg" 
               alt="Montgomery Place Emblem" 
               className="w-9 h-9 object-contain group-hover:scale-105 transition-all duration-200"
             />
