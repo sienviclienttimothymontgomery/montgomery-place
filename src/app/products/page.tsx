@@ -48,13 +48,7 @@ export default function ProductsPage() {
               return (
                   <Link
                     key={product.slug}
-                    href={
-                      product.slug === "oxisuretech"
-                        ? "https://oxisuretechsolutions.com/"
-                        : `/products/${product.slug}`
-                    }
-                    target={product.slug === "oxisuretech" ? "_blank" : undefined}
-                    rel={product.slug === "oxisuretech" ? "noopener noreferrer" : undefined}
+                    href={`/products/${product.slug}`}
                     className="group block"
                   >
                   <div className="h-full rounded-2xl bg-[var(--bg)] border border-[var(--border)] hover:border-[var(--accent)] hover:shadow-xl transition-all duration-300 overflow-hidden">

@@ -52,7 +52,7 @@ export function OxiSureTechFoundation() {
               respiratory systems — enhancing performance, safety, and usability
               through a unified intelligence layer.
             </p>
-            <Link href="https://oxisuretechsolutions.com/" target="_blank" rel="noopener noreferrer">
+            <Link href="/technology/oxisuretech">
               <Button className="rounded-2xl">
                 Learn More About OxiSureTech
                 <ArrowRight className="w-4 h-4 ml-2" />

@@ -45,7 +45,7 @@ export function Hero() {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Link>
-              <Link href="https://oxisuretechsolutions.com/" target="_blank" rel="noopener noreferrer">
+              <Link href="/technology/oxisuretech">
                 <Button variant="outline" size="lg" className="text-base px-10 py-4 rounded-2xl border-2 border-[var(--accent)]/30 text-[var(--fg)] hover:border-[var(--accent)] hover:text-[var(--accent)] hover:bg-[var(--accent)]/5 hover:-translate-y-1 transition-all duration-300 backdrop-blur-sm">
                   Learn About OxiSureTech
                 </Button>

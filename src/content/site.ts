@@ -12,7 +12,7 @@ export const siteConfig = {
 export const navLinks: NavLink[] = [
   {
     label: "Technology",
-    href: "https://oxisuretechsolutions.com/",
+    href: "/technology/oxisuretech",
   },
   {
     label: "Products",
@@ -50,8 +50,8 @@ export const navLinks: NavLink[] = [
 export const footerLinks = {
   products: [
     { label: "The Ecosystem", href: "/products" },
-    { label: "OxiSureTech Platform", href: "https://oxisuretechsolutions.com/" },
-    { label: "Premium Tubing", href: "https://oxisuretechsolutions.com/" },
+    { label: "OxiSureTech Platform", href: "/technology/oxisuretech" },
+    { label: "Premium Tubing", href: "/products/oxisuretech" },
   ],
   company: [
     { label: "About Us", href: "/about" },
