@@ -57,7 +57,7 @@ export function Hero() {
           <div className="relative mx-auto w-full max-w-lg lg:max-w-none">
             <div className="absolute inset-0 bg-gradient-to-tr from-[var(--accent)] to-sky-400 rounded-full blur-3xl opacity-20 animate-pulse-slow object-cover" />
             <img 
-              src="/images/products/oxisuretech.png" 
+              src="/images/products/oxisuretech.jpg" 
               alt="Montgomery Place OxiSureTech Ecosystem" 
               className="relative z-10 w-full h-auto drop-shadow-2xl hero-float rounded-3xl border border-white/10"
               loading="eager"

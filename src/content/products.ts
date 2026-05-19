@@ -18,7 +18,11 @@ export const products: Product[] = [
     ],
     category: "platform",
     icon: "Cpu",
-    image: "/images/products/oxisuretech.png",
+    image: "/images/products/oxisuretech.jpg",
+    gallery: [
+      "/images/products/oxisuretech.jpg",
+      "/images/products/oxisuretech-single.jpg",
+    ],
     fullPage: true,
     color: "#1A6DB5",
   },
