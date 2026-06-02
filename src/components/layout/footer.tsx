@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { footerLinks, siteConfig } from "@/content/site";
 import { Container } from "@/components/ui/section";
@@ -8,43 +9,34 @@ export function Footer() {
     <footer className="bg-[#0F172A] text-white">
       <Container>
         <div className="py-16 md:py-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
-            {/* Brand */}
-            <div className="lg:col-span-2 space-y-5">
+          <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-5">
+            <div className="space-y-5 lg:col-span-2">
               <Link href="/" className="flex items-center gap-3">
-                <img 
-                  src="/images/logo-symbol.jpg" 
-                  alt="Montgomery Place Logo" 
-                  className="w-11 h-11 object-contain"
+                <Image
+                  src="/images/logo-symbol.jpg"
+                  alt="Montgomery Place logo"
+                  width={44}
+                  height={44}
+                  className="h-11 w-11 object-contain"
                 />
-                <span className="font-heading text-xl font-bold text-white">
-                  {siteConfig.name}
-                </span>
+                <span className="font-heading text-xl font-bold text-white">{siteConfig.name}</span>
               </Link>
-              <p className="text-sm text-slate-300 max-w-sm leading-relaxed">
-                {siteConfig.description}
-              </p>
+              <p className="max-w-sm text-sm leading-relaxed text-slate-300">{siteConfig.description}</p>
               <a
                 href={`mailto:${siteConfig.contactEmail}`}
-                className="inline-flex items-center gap-2 text-sm text-[var(--accent)] hover:text-blue-300 transition-colors"
+                className="inline-flex items-center gap-2 text-sm text-[var(--accent)] transition-colors hover:text-blue-300"
               >
-                <Mail className="w-4 h-4" />
+                <Mail className="h-4 w-4" />
                 {siteConfig.contactEmail}
               </a>
             </div>
 
-            {/* Products */}
             <div className="space-y-4">
-              <h3 className="text-sm font-semibold text-white uppercase tracking-wider">
-                Products
-              </h3>
+              <h2 className="text-sm font-semibold uppercase tracking-wider text-white">Products</h2>
               <ul className="space-y-3">
                 {footerLinks.products.map((link) => (
                   <li key={link.label}>
-                    <Link
-                      href={link.href}
-                      className="text-sm text-slate-300 hover:text-white transition-colors"
-                    >
+                    <Link href={link.href} className="text-sm text-slate-300 transition-colors hover:text-white">
                       {link.label}
                     </Link>
                   </li>
@@ -52,18 +44,12 @@ export function Footer() {
               </ul>
             </div>
 
-            {/* Company */}
             <div className="space-y-4">
-              <h3 className="text-sm font-semibold text-white uppercase tracking-wider">
-                Company
-              </h3>
+              <h2 className="text-sm font-semibold uppercase tracking-wider text-white">Company</h2>
               <ul className="space-y-3">
                 {footerLinks.company.map((link) => (
                   <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="text-sm text-slate-300 hover:text-white transition-colors"
-                    >
+                    <Link href={link.href} className="text-sm text-slate-300 transition-colors hover:text-white">
                       {link.label}
                     </Link>
                   </li>
@@ -71,18 +57,12 @@ export function Footer() {
               </ul>
             </div>
 
-            {/* Resources */}
             <div className="space-y-4">
-              <h3 className="text-sm font-semibold text-white uppercase tracking-wider">
-                Resources
-              </h3>
+              <h2 className="text-sm font-semibold uppercase tracking-wider text-white">Resources</h2>
               <ul className="space-y-3">
                 {footerLinks.resources.map((link) => (
                   <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="text-sm text-slate-300 hover:text-white transition-colors"
-                    >
+                    <Link href={link.href} className="text-sm text-slate-300 transition-colors hover:text-white">
                       {link.label}
                     </Link>
                   </li>
@@ -92,19 +72,13 @@ export function Footer() {
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="py-6 border-t border-slate-700 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="flex flex-col items-center justify-between gap-4 border-t border-slate-700 py-6 sm:flex-row">
           <p className="text-xs text-slate-400">
-            &copy; {new Date().getFullYear()} Montgomery Place LLC. All rights
-            reserved.
+            &copy; {new Date().getFullYear()} Montgomery Place LLC. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             {footerLinks.legal.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-xs text-slate-400 hover:text-white transition-colors"
-              >
+              <Link key={link.href} href={link.href} className="text-xs text-slate-400 transition-colors hover:text-white">
                 {link.label}
               </Link>
             ))}

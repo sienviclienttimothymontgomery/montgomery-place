@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { Section, Container } from "@/components/ui/section";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import { Send, CheckCircle } from "lucide-react";
 
 export function NewsletterSignup() {
@@ -27,7 +26,6 @@ export function NewsletterSignup() {
         setEmail("");
       }
     } catch {
-      // Silently handle — form still shows success for UX
       setSubmitted(true);
     } finally {
       setLoading(false);
@@ -37,47 +35,40 @@ export function NewsletterSignup() {
   return (
     <Section>
       <Container size="md">
-        <div className="relative p-12 md:p-16 rounded-3xl bg-gradient-to-br from-[var(--accent)] to-[var(--accent-hover)] text-white overflow-hidden">
-          {/* Decorative elements */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
-          <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />
+        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[var(--accent)] to-[var(--accent-hover)] p-12 text-white md:p-16">
+          <div className="absolute top-0 right-0 h-64 w-64 translate-x-1/2 -translate-y-1/2 rounded-full bg-white/5" />
+          <div className="absolute bottom-0 left-0 h-48 w-48 -translate-x-1/2 translate-y-1/2 rounded-full bg-white/5" />
 
           <div className="relative space-y-6 text-center">
-            <h2 className="font-heading text-3xl md:text-4xl font-bold">
-              Join Early Access to New Ecosystem Innovations
+            <h2 className="font-heading text-3xl font-bold md:text-4xl">
+              Join Product Updates from Montgomery Place
             </h2>
-            <p className="text-white/80 text-lg max-w-xl mx-auto">
-              Get the latest updates on connected respiratory care, system intelligence,
-              and exclusive access to the growing OxiSureTech ecosystem.
+            <p className="mx-auto max-w-xl text-lg text-white/80">
+              Get the latest updates on respiratory comfort products, education, and future Montgomery Place announcements.
             </p>
 
             {submitted ? (
               <div className="flex items-center justify-center gap-3 py-4">
-                <CheckCircle className="w-6 h-6 text-white" />
-                <span className="text-lg font-medium">
-                  Thank you for subscribing!
-                </span>
+                <CheckCircle className="h-6 w-6 text-white" />
+                <span className="text-lg font-medium">Thank you for subscribing!</span>
               </div>
             ) : (
-              <form
-                onSubmit={handleSubmit}
-                className="flex flex-col sm:flex-row items-center gap-3 max-w-md mx-auto"
-              >
+              <form onSubmit={handleSubmit} className="mx-auto flex max-w-md flex-col items-center gap-3 sm:flex-row">
                 <input
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Enter your email"
                   required
-                  className="w-full px-5 py-3.5 rounded-xl bg-white/15 border border-white/20 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-white/40 backdrop-blur-sm"
+                  className="w-full rounded-xl border border-white/20 bg-white/15 px-5 py-3.5 text-white placeholder:text-white/60 backdrop-blur-sm focus:outline-none focus:ring-2 focus:ring-white/40"
                 />
                 <Button
                   type="submit"
                   disabled={loading}
-                  className="w-full sm:w-auto bg-white text-[var(--accent)] hover:bg-white/90 shadow-lg whitespace-nowrap"
+                  className="w-full whitespace-nowrap bg-white text-[var(--accent)] hover:bg-white/90 sm:w-auto"
                 >
                   {loading ? "..." : "Subscribe"}
-                  <Send className="w-4 h-4 ml-2" />
+                  <Send className="ml-2 h-4 w-4" />
                 </Button>
               </form>
             )}

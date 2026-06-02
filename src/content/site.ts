@@ -1,30 +1,30 @@
-import { NavLink, LegalPage } from "@/types";
+import { NavLink } from "@/types";
 
 export const siteConfig = {
   name: "Montgomery Place",
-  tagline: "Healthier Living — At Home and On the Go",
+  tagline: "Respiratory Comfort Products for Real Life",
   description:
-    "Montgomery Place LLC is a respiratory health and home wellness company. Our OxiSureTech platform powers a complete ecosystem of products designed to make breathing therapy safer, more comfortable, and beautifully integrated into daily life.",
+    "Montgomery Place develops respiratory comfort products designed to reduce daily friction for oxygen users, caregivers, and care teams, starting with OxiSureTech Premium 6-channel kink-resistant oxygen tubing.",
   contactEmail: "marketplace@montgomeryplacellc.com",
   url: "https://montgomeryplacellc.com",
 };
 
 export const navLinks: NavLink[] = [
   {
-    label: "Technology",
-    href: "/technology/oxisuretech",
-  },
-  {
     label: "Products",
     href: "/products",
+  },
+  {
+    label: "OxiSureTech",
+    href: "/technology/oxisuretech",
   },
   {
     label: "Solutions",
     href: "#",
     children: [
+      { label: "Mobility Solutions", href: "/mobility-solutions" },
       { label: "Respiratory Innovation", href: "/innovation" },
       { label: "Sleep Therapy", href: "/sleep-therapy" },
-      { label: "Mobility Solutions", href: "/mobility-solutions" },
     ],
   },
   {
@@ -49,9 +49,9 @@ export const navLinks: NavLink[] = [
 
 export const footerLinks = {
   products: [
-    { label: "The Ecosystem", href: "/products" },
+    { label: "All Products", href: "/products" },
+    { label: "OxiSureTech Premium Tubing", href: "/products/oxisuretech" },
     { label: "OxiSureTech Platform", href: "/technology/oxisuretech" },
-    { label: "Premium Tubing", href: "/products/oxisuretech" },
   ],
   company: [
     { label: "About Us", href: "/about" },
@@ -61,10 +61,10 @@ export const footerLinks = {
     { label: "Contact", href: "/contact" },
   ],
   resources: [
-    { label: "Education", href: "/education" },
-    { label: "Respiratory Innovation", href: "/innovation" },
-    { label: "Sleep Wellness", href: "/sleep-therapy" },
-    { label: "Mobility Solutions", href: "/mobility-solutions" },
+    { label: "Education Center", href: "/education" },
+    { label: "Oxygen Tubing Safety", href: "/education/oxygen-tubing-safety-at-home" },
+    { label: "Prevent Kinking", href: "/education/how-to-keep-oxygen-tubing-from-kinking" },
+    { label: "What Is 6-Channel Tubing?", href: "/education/what-is-6-channel-oxygen-tubing" },
   ],
   legal: [
     { label: "Privacy Policy", href: "/privacy" },

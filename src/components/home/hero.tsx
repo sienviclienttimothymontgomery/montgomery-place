@@ -1,67 +1,92 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/section";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, ShieldCheck, Stethoscope } from "lucide-react";
+
+const benefitPoints = [
+  "6-channel oxygen tubing designed to help reduce kinks and tangles",
+  "A lighter, smoother daily experience for home oxygen routines",
+  "Clear paths for patients, caregivers, professionals, and partners",
+];
 
 export function Hero() {
   return (
-    <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-gradient-to-br from-[#E8F1FA] via-white to-[#F2F4F7] dark:from-[#0D1320] dark:via-[#0B0E13] dark:to-[#12151A]">
-      {/* Background accents */}
-      <div className="absolute top-1/4 right-[15%] w-[500px] h-[500px] bg-[var(--accent)] rounded-full opacity-[0.04] blur-3xl" />
-      <div className="absolute bottom-1/4 left-[10%] w-[400px] h-[400px] bg-sky-400 rounded-full opacity-[0.04] blur-3xl" />
-      
-      {/* Grid Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] opacity-20 dark:opacity-10" />
+    <section className="relative overflow-hidden bg-gradient-to-br from-[#E8F1FA] via-white to-[#F2F4F7] dark:from-[#0D1320] dark:via-[#0B0E13] dark:to-[#12151A]">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(26,109,181,0.14),transparent_34%),radial-gradient(circle_at_bottom_left,rgba(59,154,225,0.14),transparent_30%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808010_1px,transparent_1px),linear-gradient(to_bottom,#80808010_1px,transparent_1px)] bg-[size:28px_28px] opacity-30 dark:opacity-10" />
 
-      <Container className="relative py-20">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
-          {/* Text Content */}
-          <div className="space-y-8 text-center lg:text-left z-10">
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[var(--accent)]/10 text-[var(--accent)] text-sm font-semibold tracking-wide backdrop-blur-md border border-[var(--accent)]/10">
-              <Sparkles className="w-4 h-4" />
-              Powered by OxiSureTech
+      <Container className="relative py-18 md:py-24 lg:py-28">
+        <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
+          <div className="space-y-8">
+            <div className="inline-flex items-center gap-2 rounded-full border border-[var(--accent)]/15 bg-white/80 px-4 py-2 text-sm font-semibold text-[var(--accent)] shadow-sm backdrop-blur dark:bg-white/5">
+              <ShieldCheck className="h-4 w-4" />
+              Respiratory comfort, mobility, and product clarity
             </div>
 
-            <h1 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.1] sm:leading-tight">
-              <span className="text-slate-900 dark:text-white">Intelligent</span>{" "}
-              <span className="bg-gradient-to-r from-[var(--accent)] to-teal-400 bg-clip-text text-transparent">
-                Respiratory Care,
-              </span>{" "}
-              <br className="hidden sm:block" />
-              <span className="text-slate-900 dark:text-white">Designed for</span>{" "}
-              <span className="bg-gradient-to-r from-teal-400 to-[var(--accent)] bg-clip-text text-transparent">
-                Real Life
-              </span>
-            </h1>
+            <div className="space-y-5">
+              <h1 className="max-w-4xl font-heading text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl dark:text-white">
+                Kink-Resistant Oxygen Tubing for Safer, More Comfortable Home Oxygen Use
+              </h1>
+              <p className="max-w-3xl text-lg leading-relaxed text-[var(--fg-secondary)] md:text-xl">
+                Montgomery Place develops respiratory-care products designed to reduce daily friction for oxygen users, caregivers, and care teams, starting with premium 6-channel oxygen tubing built for comfort, mobility, and reliability.
+              </p>
+            </div>
 
-            <p className="text-lg md:text-xl text-[var(--fg-secondary)] max-w-2xl mx-auto lg:mx-0 leading-relaxed font-light">
-              Montgomery Place is building a connected respiratory ecosystem. Powered by the OxiSureTech intelligence layer, our systems work alongside your existing devices — enhancing performance, integration, and daily comfort.
-            </p>
-
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
-              <Link href="/products">
-                <Button size="lg" className="text-base px-10 py-4 rounded-2xl shadow-lg hover:shadow-xl hover:shadow-[var(--accent)]/20 hover:-translate-y-1 transition-all duration-300">
-                  Explore the Ecosystem
-                  <ArrowRight className="w-5 h-5 ml-2" />
+            <div className="flex flex-col gap-4 sm:flex-row">
+              <Link href="/products/oxisuretech">
+                <Button size="lg" className="w-full rounded-2xl sm:w-auto">
+                  Explore OxiSureTech Tubing
+                  <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
-              <Link href="/technology/oxisuretech">
-                <Button variant="outline" size="lg" className="text-base px-10 py-4 rounded-2xl border-2 border-[var(--accent)]/30 text-[var(--fg)] hover:border-[var(--accent)] hover:text-[var(--accent)] hover:bg-[var(--accent)]/5 hover:-translate-y-1 transition-all duration-300 backdrop-blur-sm">
-                  Learn About OxiSureTech
+              <Link href="/contact?type=partner">
+                <Button variant="outline" size="lg" className="w-full rounded-2xl sm:w-auto">
+                  For Professionals &amp; Partners
                 </Button>
               </Link>
             </div>
+
+            <ul className="grid gap-3 text-sm text-[var(--fg-secondary)] sm:grid-cols-3 sm:text-base">
+              {benefitPoints.map((point) => (
+                <li key={point} className="rounded-2xl border border-[var(--border)] bg-white/70 px-4 py-4 shadow-sm dark:bg-white/5">
+                  {point}
+                </li>
+              ))}
+            </ul>
           </div>
 
-          {/* Hero Image */}
-          <div className="relative mx-auto w-full max-w-lg lg:max-w-none">
-            <div className="absolute inset-0 bg-gradient-to-tr from-[var(--accent)] to-sky-400 rounded-full blur-3xl opacity-20 animate-pulse-slow object-cover" />
-            <img 
-              src="/images/products/oxisuretech.jpg" 
-              alt="Montgomery Place OxiSureTech Ecosystem" 
-              className="relative z-10 w-full h-auto drop-shadow-2xl hero-float rounded-3xl border border-white/10"
-              loading="eager"
-            />
+          <div className="relative">
+            <div className="absolute -inset-4 rounded-[2rem] bg-[linear-gradient(135deg,rgba(26,109,181,0.18),rgba(59,154,225,0.04))] blur-2xl" />
+            <div className="relative overflow-hidden rounded-[2rem] border border-white/60 bg-white/80 p-5 shadow-[var(--shadow-diffuse)] backdrop-blur dark:border-white/10 dark:bg-[var(--bg-elevated)]">
+              <Image
+                src="/images/products/oxisuretech.jpg"
+                alt="OxiSureTech Premium oxygen tubing displayed in a clean home-care setting"
+                width={900}
+                height={900}
+                priority
+                className="w-full rounded-[1.5rem] object-cover"
+              />
+              <div className="mt-5 grid gap-4 sm:grid-cols-2">
+                <div className="rounded-2xl bg-[var(--accent-surface)] p-4">
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--accent)]">
+                    Built for Home Use
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-[var(--fg-secondary)]">
+                    Designed around common frustrations like kinks, tangles, drag, and room-to-room movement.
+                  </p>
+                </div>
+                <div className="rounded-2xl border border-[var(--border)] bg-[var(--bg)] p-4">
+                  <p className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-[var(--accent)]">
+                    <Stethoscope className="h-4 w-4" />
+                    General Product Information
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-[var(--fg-secondary)]">
+                    Product information only, not medical advice. Use oxygen therapy equipment according to provider instructions.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </Container>

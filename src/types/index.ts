@@ -31,8 +31,8 @@ export interface Article {
   excerpt: string;
   category: string;
   readTime: string;
-  date: string;
-  image: string;
+  date?: string;
+  image?: string;
 }
 
 export interface ContactInquiry {

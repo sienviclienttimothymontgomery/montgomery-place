@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -19,23 +20,23 @@ export function Navbar() {
   };
 
   return (
-    <header className="sticky top-0 z-50 backdrop-blur-xl bg-[var(--bg)]/80 border-b border-[var(--border)]">
+    <header className="sticky top-0 z-50 border-b border-[var(--border)] bg-[var(--bg)]/80 backdrop-blur-xl">
       <nav className="mx-auto max-w-7xl px-6 md:px-8">
-        <div className="flex h-16 md:h-20 items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-3 group">
-            <img 
-              src="/images/logo-symbol.jpg" 
-              alt="Montgomery Place Emblem" 
-              className="w-9 h-9 object-contain group-hover:scale-105 transition-all duration-200"
+        <div className="flex h-16 items-center justify-between md:h-20">
+          <Link href="/" className="group flex items-center gap-3">
+            <Image
+              src="/images/logo-symbol.jpg"
+              alt="Montgomery Place emblem"
+              width={36}
+              height={36}
+              className="h-9 w-9 object-contain transition-all duration-200 group-hover:scale-105"
             />
-            <span className="hidden sm:block font-heading text-lg font-bold text-[var(--fg)] tracking-tight">
+            <span className="hidden font-heading text-lg font-bold tracking-tight text-[var(--fg)] sm:block">
               {siteConfig.name}
             </span>
           </Link>
 
-          {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-1">
+          <div className="hidden items-center gap-1 lg:flex">
             {navLinks.map((link) =>
               link.children ? (
                 <div
@@ -46,43 +47,33 @@ export function Navbar() {
                 >
                   <button
                     className={cn(
-                      "relative flex items-center gap-1 px-4 py-2 text-sm font-medium transition-colors rounded-xl cursor-pointer",
-                      "hover:text-[var(--accent)] hover:bg-[var(--accent)]/8",
-                      openDropdown === link.label
-                        ? "text-[var(--accent)]"
-                        : "text-[var(--fg-secondary)]"
+                      "relative flex cursor-pointer items-center gap-1 rounded-xl px-4 py-2 text-sm font-medium transition-colors",
+                      "hover:bg-[var(--accent)]/8 hover:text-[var(--accent)]",
+                      openDropdown === link.label ? "text-[var(--accent)]" : "text-[var(--fg-secondary)]"
                     )}
                   >
                     {link.label}
                     <ChevronDown
-                      className={cn(
-                        "w-3.5 h-3.5 transition-transform duration-200",
-                        openDropdown === link.label ? "rotate-180" : ""
-                      )}
+                      className={cn("h-3.5 w-3.5 transition-transform duration-200", openDropdown === link.label ? "rotate-180" : "")}
                     />
-                    {/* Active indicator line */}
                     <span
                       className={cn(
                         "absolute bottom-0 left-3 right-3 h-0.5 rounded-full bg-[var(--accent)] transition-all duration-200",
-                        openDropdown === link.label
-                          ? "opacity-100 scale-x-100"
-                          : "opacity-0 scale-x-0"
+                        openDropdown === link.label ? "scale-x-100 opacity-100" : "scale-x-0 opacity-0"
                       )}
                     />
                   </button>
                   {openDropdown === link.label && (
-                    <div className="absolute top-full left-0 pt-2 w-56">
-                      <div className="rounded-2xl bg-[var(--bg-elevated)] border border-[var(--border)] shadow-xl py-2 backdrop-blur-xl">
+                    <div className="absolute left-0 top-full w-56 pt-2">
+                      <div className="rounded-2xl border border-[var(--border)] bg-[var(--bg-elevated)] py-2 shadow-xl backdrop-blur-xl">
                         {link.children.map((child) => (
                           <Link
                             key={child.href}
                             href={child.href}
                             className={cn(
                               "flex items-center gap-3 px-4 py-2.5 text-sm transition-all duration-150",
-                              "hover:text-[var(--accent)] hover:bg-[var(--accent)]/8 hover:pl-5",
-                              isActive(child.href)
-                                ? "text-[var(--accent)] font-medium"
-                                : "text-[var(--fg-secondary)]"
+                              "hover:bg-[var(--accent)]/8 hover:pl-5 hover:text-[var(--accent)]",
+                              isActive(child.href) ? "font-medium text-[var(--accent)]" : "text-[var(--fg-secondary)]"
                             )}
                           >
                             {child.label}
@@ -97,21 +88,18 @@ export function Navbar() {
                   key={link.href}
                   href={link.href}
                   className={cn(
-                    "relative px-4 py-2 text-sm font-medium transition-colors rounded-xl group/nav",
-                    "hover:text-[var(--accent)] hover:bg-[var(--accent)]/8",
-                    isActive(link.href!)
-                      ? "text-[var(--accent)]"
-                      : "text-[var(--fg-secondary)]"
+                    "group/nav relative rounded-xl px-4 py-2 text-sm font-medium transition-colors",
+                    "hover:bg-[var(--accent)]/8 hover:text-[var(--accent)]",
+                    isActive(link.href!) ? "text-[var(--accent)]" : "text-[var(--fg-secondary)]"
                   )}
                 >
                   {link.label}
-                  {/* Active indicator line */}
                   <span
                     className={cn(
                       "absolute bottom-0 left-3 right-3 h-0.5 rounded-full bg-[var(--accent)] transition-all duration-200",
                       isActive(link.href!)
-                        ? "opacity-100 scale-x-100"
-                        : "opacity-0 scale-x-0 group-hover/nav:opacity-100 group-hover/nav:scale-x-100"
+                        ? "scale-x-100 opacity-100"
+                        : "scale-x-0 opacity-0 group-hover/nav:scale-x-100 group-hover/nav:opacity-100"
                     )}
                   />
                 </Link>
@@ -119,27 +107,25 @@ export function Navbar() {
             )}
           </div>
 
-          {/* Right Side Actions */}
           <div className="flex items-center gap-3">
             <ThemeToggle />
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="lg:hidden p-2 rounded-xl text-[var(--fg-secondary)] hover:text-[var(--fg)] hover:bg-[var(--accent)]/8 transition-colors cursor-pointer"
+              className="cursor-pointer rounded-xl p-2 text-[var(--fg-secondary)] transition-colors hover:bg-[var(--accent)]/8 hover:text-[var(--fg)] lg:hidden"
               aria-label="Toggle menu"
             >
-              {mobileOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              {mobileOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </button>
           </div>
         </div>
 
-        {/* Mobile Nav */}
         {mobileOpen && (
-          <div className="lg:hidden py-4 border-t border-[var(--border)]">
+          <div className="border-t border-[var(--border)] py-4 lg:hidden">
             <div className="space-y-1">
               {navLinks.map((link) =>
                 link.children ? (
                   <div key={link.label} className="space-y-1">
-                    <div className="px-4 py-2 text-xs uppercase tracking-wider text-[var(--fg-secondary)] font-semibold">
+                    <div className="px-4 py-2 text-xs font-semibold uppercase tracking-wider text-[var(--fg-secondary)]">
                       {link.label}
                     </div>
                     {link.children.map((child) => (
@@ -148,10 +134,10 @@ export function Navbar() {
                         href={child.href}
                         onClick={() => setMobileOpen(false)}
                         className={cn(
-                          "block px-6 py-2.5 text-sm rounded-xl transition-colors",
-                          "hover:text-[var(--accent)] hover:bg-[var(--accent)]/8",
+                          "block rounded-xl px-6 py-2.5 text-sm transition-colors",
+                          "hover:bg-[var(--accent)]/8 hover:text-[var(--accent)]",
                           isActive(child.href)
-                            ? "text-[var(--accent)] font-medium bg-[var(--accent)]/5"
+                            ? "bg-[var(--accent)]/5 font-medium text-[var(--accent)]"
                             : "text-[var(--fg-secondary)]"
                         )}
                       >
@@ -165,10 +151,10 @@ export function Navbar() {
                     href={link.href}
                     onClick={() => setMobileOpen(false)}
                     className={cn(
-                      "block px-4 py-2.5 text-sm font-medium rounded-xl transition-colors",
-                      "hover:text-[var(--accent)] hover:bg-[var(--accent)]/8",
+                      "block rounded-xl px-4 py-2.5 text-sm font-medium transition-colors",
+                      "hover:bg-[var(--accent)]/8 hover:text-[var(--accent)]",
                       isActive(link.href!)
-                        ? "text-[var(--accent)] bg-[var(--accent)]/5"
+                        ? "bg-[var(--accent)]/5 text-[var(--accent)]"
                         : "text-[var(--fg-secondary)]"
                     )}
                   >

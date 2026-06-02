@@ -4,17 +4,17 @@ export const products: Product[] = [
   {
     slug: "oxisuretech",
     name: "OxiSureTech Premium Tubing",
-    tagline: "Breathing Made Better.",
+    tagline: "Premium 6-channel oxygen tubing for easier home use",
     description:
-      "Premium, kink-resistant, 6-channel oxygen tubing built for tangle-free mobility, continuous flow, and long-lasting durability.",
+      "Kink-resistant oxygen tubing designed to help reduce tangles, support smoother movement around the home, and make daily oxygen routines more comfortable.",
     longDescription:
-      "OxiSure Tech was founded with one goal: to bring reliable oxygen solutions that improve quality of life. We combine innovation, precision, and compassion to ensure that every breath you take is supported by care you can trust.\n\nExperience uninterrupted oxygen flow with our premium kink-resistant oxygen tubing. Engineered for comfort and reliability, our tubing features advanced materials that prevent kinking and ensure consistent oxygen delivery. Perfect for active lifestyles and everyday use.",
+      "OxiSureTech Premium Tubing was developed around the everyday realities of home oxygen use: tubing that catches, kinks, twists, or feels like one more obstacle in the room.\n\nMontgomery Place focuses on practical respiratory comfort products that are easier to live with. This premium 6-channel oxygen tubing is designed to help reduce kinking, support mobility, and create a calmer daily setup for oxygen users, caregivers, and care teams.\n\nProduct information on this website is provided for general informational purposes only. Use oxygen therapy equipment according to your healthcare provider's instructions and applicable product labeling.",
     features: [
-      "Six-channel kink-resistant design",
-      "Tangle-free mobility",
-      "Soft-to-skin latex-free touch",
-      "Universal device compatibility",
-      "Durable yet lightweight"
+      "6-channel kink-resistant design",
+      "Tangle-conscious daily movement",
+      "Latex-free tubing",
+      "Designed for standard oxygen therapy setups",
+      "Lightweight everyday feel",
     ],
     category: "platform",
     icon: "Cpu",
@@ -26,15 +26,14 @@ export const products: Product[] = [
     fullPage: true,
     color: "#1A6DB5",
   },
-  // TEMPORARILY HIDDEN — not yet available
   {
     slug: "glowsafe",
     name: "GlowSafe",
     tagline: "Intelligent Safety, Always Visible",
     description:
-      "GlowSafe is Montgomery Place's ambient safety indicator system. Using soft, color-coded LED illumination, GlowSafe provides at-a-glance status updates for oxygen levels, system health, and environmental conditions — all without intrusive alarms or clinical aesthetics.",
+      "GlowSafe is Montgomery Place's ambient safety indicator system. Using soft, color-coded LED illumination, GlowSafe provides at-a-glance status updates for oxygen levels, system health, and environmental conditions without intrusive alarms.",
     longDescription:
-      "Traditional oxygen safety systems rely on loud alarms and blinking warning lights that create anxiety and disrupt daily life. GlowSafe takes a fundamentally different approach: ambient intelligence.\n\nGlowSafe integrates seamlessly into your home environment using soft, warm LED indicators that communicate system status through intuitive color gradients. Green means everything is operating perfectly. A gentle amber glow signals that attention may be needed soon. Only genuine safety events trigger more prominent notifications — and even then, GlowSafe prioritizes calm, clear communication over panic.\n\nBuilt on OxiSureTech, GlowSafe monitors not just your equipment but also environmental factors like room ventilation and humidity that affect respiratory comfort.",
+      "Traditional oxygen safety systems rely on loud alarms and blinking warning lights that create anxiety and disrupt daily life. GlowSafe takes a fundamentally different approach: ambient intelligence.\n\nGlowSafe integrates into the home environment using soft LED indicators that communicate system status through intuitive color gradients. Green means everything is operating normally. A gentle amber glow signals that attention may be needed soon. More prominent notifications are reserved for higher-priority events.\n\nBuilt on OxiSureTech, GlowSafe monitors equipment conditions and environmental factors like room ventilation and humidity that affect respiratory comfort.",
     features: [
       "Ambient LED status indicators",
       "Color-coded safety communication",
@@ -52,24 +51,20 @@ export const products: Product[] = [
     color: "#10B981",
     hidden: true,
   },
-  // TEMPORARILY HIDDEN — not yet available (Kickstarter)
   {
     slug: "reelair",
     name: "ReelAir",
     tagline: "Freedom of Movement, Reimagined",
     description:
-      "ReelAir is Montgomery Place's portable oxygen management solution. Featuring a patented retractable tubing system and lightweight design, ReelAir eliminates tangled lines and restricted movement — giving you the freedom to move naturally throughout your home and beyond.",
+      "ReelAir is Montgomery Place's oxygen line management concept for easier around-the-home mobility and cleaner tubing control.",
     longDescription:
-      "For millions of people who rely on supplemental oxygen, tangled tubing is more than an inconvenience — it's a safety hazard and a constant reminder of limitation. ReelAir changes that narrative entirely.\n\nInspired by modern retractable cord technology, ReelAir houses your oxygen line in a sleek, compact unit that automatically manages slack. Walk from room to room without worrying about tripping hazards. Sit down without gathering loops of tubing. Stand up and move freely while ReelAir smoothly extends and retracts as needed.\n\nThe result isn't just more convenient oxygen delivery — it's a fundamental shift in how it feels to live with respiratory support. ReelAir makes supplemental oxygen feel less like medical equipment and more like a natural part of your daily routine.",
+      "For many people who rely on supplemental oxygen, tangled tubing is more than an inconvenience. It can add daily friction and complicate movement through the home.\n\nReelAir is being developed to help manage slack, reduce clutter, and make movement with oxygen support feel easier and more natural.\n\nReelAir is not publicly available yet. Contact Montgomery Place if you would like to request future product information.",
     features: [
-      "Patented retractable tubing system",
-      "Tangle-free daily movement",
+      "Retractable line-management concept",
+      "Tangle-conscious daily movement",
       "Lightweight portable design",
-      "Smooth auto-tension adjustment",
-      "Built-in line management",
-      "OxiSureTech flow optimization",
-      "Travel-friendly form factor",
-      "Durable premium materials",
+      "Built-in line organization",
+      "Future OxiSureTech integration",
     ],
     category: "mobility",
     icon: "Move",
@@ -77,24 +72,19 @@ export const products: Product[] = [
     color: "#3B82F6",
     hidden: true,
   },
-  // TEMPORARILY HIDDEN — not yet available
   {
     slug: "flexcannula",
     name: "FlexCannula",
     tagline: "Comfort You Can Wear All Day",
     description:
-      "FlexCannula is Montgomery Place's next-generation nasal cannula designed for extended wear comfort. Using medical-grade silicone with an adaptive flex frame, FlexCannula conforms to your unique facial geometry — reducing pressure points and skin irritation for all-day, all-night comfort.",
+      "FlexCannula is Montgomery Place's next-generation nasal cannula concept designed around extended-wear comfort.",
     longDescription:
-      "Standard nasal cannulas are designed for function, not comfort. After hours of wear, rigid prongs create pressure points, hard tubing causes ear irritation, and one-size-fits-all designs leave most users constantly adjusting their fit.\n\nFlexCannula was engineered from the ground up to solve these problems. Its adaptive flex frame uses medical-grade silicone that softens with body heat, gradually conforming to your unique facial contours. The result is a custom-feeling fit that improves over time rather than degrading.\n\nThe prong design features micro-textured surfaces that maintain position without creating pressure, while the over-ear routing uses a cushioned channel that eliminates the hot spots and irritation common with standard designs.",
+      "Standard nasal cannulas are often designed for function first. FlexCannula is being explored as a more comfort-focused option for people who wear respiratory equipment for long periods.\n\nMontgomery Place is studying design directions centered on softer materials, reduced pressure points, and easier all-day wear.\n\nFlexCannula is not publicly available yet.",
     features: [
-      "Adaptive flex-frame design",
-      "Medical-grade silicone construction",
-      "Pressure-point-free prongs",
-      "Cushioned over-ear routing",
-      "All-day extended wear comfort",
-      "Body-heat responsive fitting",
-      "Hypoallergenic materials",
-      "Multiple size options",
+      "Adaptive flex-frame concept",
+      "Comfort-focused wearability",
+      "Reduced pressure-point design goals",
+      "Extended-wear positioning",
     ],
     category: "comfort",
     icon: "Heart",
@@ -102,18 +92,17 @@ export const products: Product[] = [
     color: "#EC4899",
     hidden: true,
   },
-
   {
     slug: "gooxi",
     name: "GoOxi",
     tagline: "Portable Power, Anywhere You Go",
     description:
-      "GoOxi is Montgomery Place's ultra-portable oxygen concentrator. Built for travel and on-the-go lifestyles, GoOxi delivers reliable supplemental oxygen in a compact, airline-approved package.",
+      "GoOxi is Montgomery Place's ultra-portable oxygen concentrator concept for travel and on-the-go lifestyles.",
     features: [
       "Ultra-compact portable design",
-      "Airline-approved",
-      "Extended battery life",
-      "Quick-charge capability",
+      "Travel-focused concept",
+      "Extended battery goals",
+      "Quick-charge planning",
     ],
     category: "portable",
     icon: "Briefcase",
@@ -126,12 +115,12 @@ export const products: Product[] = [
     name: "CareDock",
     tagline: "Connected Care, Simplified",
     description:
-      "CareDock is Montgomery Place's family and caregiver connection platform. It provides secure, real-time status sharing and remote monitoring so loved ones and healthcare providers stay informed and connected.",
+      "CareDock is Montgomery Place's family and caregiver connection platform concept for shared visibility and coordination.",
     features: [
-      "Real-time status sharing",
+      "Status sharing concept",
       "Caregiver notifications",
-      "Healthcare provider portal",
-      "Privacy-first data sharing",
+      "Provider-facing planning",
+      "Privacy-first thinking",
     ],
     category: "hub",
     icon: "Users",
@@ -152,7 +141,6 @@ export function getTeaserProducts(): Product[] {
   return products.filter((p) => !p.fullPage && !p.hidden);
 }
 
-/** All visible products (excludes hidden ones) */
 export function getVisibleProducts(): Product[] {
   return products.filter((p) => !p.hidden);
 }

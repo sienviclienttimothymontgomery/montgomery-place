@@ -1,135 +1,78 @@
 import Link from "next/link";
 import { Section, Container } from "@/components/ui/section";
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Shield, Move, Heart } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Briefcase, HeartHandshake, Stethoscope } from "lucide-react";
 
-// TEMPORARILY HIDDEN — GlowSafe, ReelAir, FlexCannula not yet available
-const spotlights: { slug: string; name: string; tagline: string; description: string; category: string; icon: React.ElementType; color: string; features: string[]; reverse: boolean }[] = [
-  // {
-  //   slug: "glowsafe",
-  //   name: "GlowSafe",
-  //   tagline: "Intelligent Safety, Always Visible",
-  //   description:
-  //     "Ambient LED safety indicators that communicate system status through intuitive color gradients — calm, clear, and integrated into your home aesthetic. No clinical alarms, just ambient intelligence.",
-  //   category: "Safety Innovation",
-  //   icon: Shield,
-  //   color: "#10B981",
-  //   features: [
-  //     "Ambient LED status indicators",
-  //     "Color-coded safety communication",
-  //     "Night-friendly dimming",
-  //     "Environmental monitoring",
-  //   ],
-  //   reverse: false,
-  // },
-  // {
-  //   slug: "reelair",
-  //   name: "ReelAir",
-  //   tagline: "Freedom of Movement, Reimagined",
-  //   description:
-  //     "A patented retractable tubing system that eliminates tangled lines and restricted movement. Walk freely, sit down without gathering loops, and live without the constant reminder of medical equipment.",
-  //   category: "Mobility Solution",
-  //   icon: Move,
-  //   color: "#3B82F6",
-  //   features: [
-  //     "Patented retractable system",
-  //     "Tangle-free movement",
-  //     "Lightweight design",
-  //     "Auto-tension adjustment",
-  //   ],
-  //   reverse: true,
-  // },
-  // {
-  //   slug: "flexcannula",
-  //   name: "FlexCannula",
-  //   tagline: "Comfort You Can Wear All Day",
-  //   description:
-  //     "Next-generation nasal cannula engineered with medical-grade silicone and an adaptive flex frame. It conforms to your unique facial geometry, reducing pressure points for all-day, all-night comfort.",
-  //   category: "Comfort & Wearables",
-  //   icon: Heart,
-  //   color: "#EC4899",
-  //   features: [
-  //     "Adaptive flex-frame design",
-  //     "Medical-grade silicone",
-  //     "Pressure-point-free prongs",
-  //     "Body-heat responsive fitting",
-  //   ],
-  //   reverse: false,
-  // },
+const audienceCards = [
+  {
+    title: "Patients & Caregivers",
+    description:
+      "Get practical product information about oxygen tubing for home use, comfort, and room-to-room mobility.",
+    href: "/contact?type=patient",
+    cta: "Request Product Info",
+    icon: HeartHandshake,
+  },
+  {
+    title: "Healthcare Professionals",
+    description:
+      "Review product details, FAQs, and educational resources that support informed respiratory-care conversations.",
+    href: "/contact?type=professional",
+    cta: "Professional Inquiry",
+    icon: Stethoscope,
+  },
+  {
+    title: "DME / Distribution Partners",
+    description:
+      "Connect with Montgomery Place about product information, availability planning, and future partner conversations.",
+    href: "/contact?type=partner",
+    cta: "Partner Inquiry",
+    icon: Briefcase,
+  },
 ];
 
 export function ProductSpotlights() {
   return (
-    <>
-      {spotlights.map((product) => (
-        <Section
-          key={product.slug}
-          variant={product.reverse ? "cool" : "default"}
-        >
-          <Container>
-            <div
-              className={`grid lg:grid-cols-2 gap-20 items-center ${
-                product.reverse ? "lg:flex-row-reverse" : ""
-              }`}
-            >
-              {/* Text column */}
-              <div
-                className={`space-y-7 ${product.reverse ? "lg:order-2" : ""}`}
-              >
-                <Badge>{product.category}</Badge>
-                <h2 className="font-heading text-4xl md:text-5xl lg:text-[3.25rem] font-bold text-[var(--fg)] tracking-tight leading-[1.1]">
-                  {product.name}
-                </h2>
-                <p
-                  className="text-xl font-medium"
-                  style={{ color: product.color }}
-                >
-                  {product.tagline}
-                </p>
-                <p className="text-[var(--fg-secondary)] text-lg leading-relaxed">
-                  {product.description}
-                </p>
-                <div className="grid grid-cols-2 gap-3 pt-2">
-                  {product.features.map((f, i) => (
-                    <div
-                      key={i}
-                      className="flex items-center gap-2 text-sm text-[var(--fg-secondary)]"
-                    >
-                      <div
-                        className="w-1.5 h-1.5 rounded-full shrink-0"
-                        style={{ backgroundColor: product.color }}
-                      />
-                      {f}
-                    </div>
-                  ))}
-                </div>
-                <Link href={`/products/${product.slug}`}>
-                  <Button className="rounded-2xl mt-2">
-                    Explore {product.name}
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Button>
-                </Link>
-              </div>
+    <Section>
+      <Container>
+        <div className="text-center space-y-4">
+          <Badge>Choose Your Path</Badge>
+          <h2 className="font-heading text-4xl font-bold tracking-tight text-[var(--fg)] md:text-5xl">
+            Built for the people who have to live with the details
+          </h2>
+          <p className="mx-auto max-w-3xl text-lg leading-relaxed text-[var(--fg-secondary)]">
+            Whether you are managing oxygen use at home, supporting a patient, or evaluating product options professionally, the next step should be obvious and easy to reach.
+          </p>
+        </div>
 
-              {/* Image placeholder */}
-              <div className={product.reverse ? "lg:order-1" : ""}>
-                <div
-                  className="aspect-[4/3] rounded-3xl flex items-center justify-center transition-all duration-500 hover:shadow-[var(--shadow-diffuse)] hover:scale-[1.02] group"
-                  style={{
-                    background: `linear-gradient(135deg, ${product.color}12, ${product.color}04)`,
-                  }}
-                >
-                  <product.icon
-                    className="w-28 h-28 opacity-15 transition-transform duration-500 group-hover:scale-110"
-                    style={{ color: product.color }}
-                  />
+        <div className="mt-12 grid gap-6 lg:grid-cols-3">
+          {audienceCards.map((card) => (
+            <Link key={card.title} href={card.href} className="group block">
+              <article className="flex h-full flex-col rounded-[2rem] border border-[var(--border)] bg-[var(--bg-elevated)] p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[var(--accent)] hover:shadow-[var(--shadow-diffuse)]">
+                <card.icon className="h-10 w-10 text-[var(--accent)]" />
+                <h3 className="mt-6 font-heading text-2xl font-bold text-[var(--fg)] group-hover:text-[var(--accent)]">
+                  {card.title}
+                </h3>
+                <p className="mt-4 flex-1 text-[var(--fg-secondary)]">
+                  {card.description}
+                </p>
+                <div className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[var(--accent)]">
+                  {card.cta}
+                  <ArrowRight className="h-4 w-4" />
                 </div>
-              </div>
-            </div>
-          </Container>
-        </Section>
-      ))}
-    </>
+              </article>
+            </Link>
+          ))}
+        </div>
+
+        <div className="mt-10 flex justify-center">
+          <Link href="/products/oxisuretech">
+            <Button variant="outline" className="rounded-2xl">
+              Review OxiSureTech Specs &amp; FAQs
+            </Button>
+          </Link>
+        </div>
+      </Container>
+    </Section>
   );
 }

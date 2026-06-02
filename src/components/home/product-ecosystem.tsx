@@ -1,5 +1,5 @@
 import { Section, Container } from "@/components/ui/section";
-import { Cpu, Shield, Move, Heart, Moon, Home, Activity, Briefcase, Users } from "lucide-react";
+import { Cpu, Shield, Move, Heart, Briefcase, Users } from "lucide-react";
 
 const ecosystemItems = [
   { name: "GlowSafe", icon: Shield, color: "#10B981", category: "Safety" },

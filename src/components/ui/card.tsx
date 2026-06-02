@@ -28,7 +28,6 @@ export function Card({
 }
 
 export function CardImage({
-  src,
   alt,
   className,
 }: {
