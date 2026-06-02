@@ -12,9 +12,9 @@ const benefitPoints = [
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-[#E8F1FA] via-white to-[#F2F4F7] dark:from-[#0D1320] dark:via-[#0B0E13] dark:to-[#12151A]">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(26,109,181,0.14),transparent_34%),radial-gradient(circle_at_bottom_left,rgba(59,154,225,0.14),transparent_30%)]" />
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808010_1px,transparent_1px),linear-gradient(to_bottom,#80808010_1px,transparent_1px)] bg-[size:28px_28px] opacity-30 dark:opacity-10" />
+    <section className="relative overflow-hidden bg-gradient-to-br from-[#E8F1FA] via-white to-[#F2F4F7] dark:from-[#16314D] dark:via-[#111F31] dark:to-[#1A2432]">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(26,109,181,0.16),transparent_34%),radial-gradient(circle_at_bottom_left,rgba(59,154,225,0.16),transparent_30%)] dark:bg-[radial-gradient(circle_at_top_right,rgba(125,211,252,0.18),transparent_36%),radial-gradient(circle_at_bottom_left,rgba(59,154,225,0.18),transparent_32%)]" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808010_1px,transparent_1px),linear-gradient(to_bottom,#80808010_1px,transparent_1px)] bg-[size:28px_28px] opacity-30 dark:opacity-15" />
 
       <Container className="relative py-18 md:py-24 lg:py-28">
         <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
@@ -49,7 +49,7 @@ export function Hero() {
 
             <ul className="grid gap-3 text-sm text-[var(--fg-secondary)] sm:grid-cols-3 sm:text-base">
               {benefitPoints.map((point) => (
-                <li key={point} className="rounded-2xl border border-[var(--border)] bg-white/70 px-4 py-4 shadow-sm dark:bg-white/5">
+                <li key={point} className="rounded-2xl border border-[var(--border)] bg-white/70 px-4 py-4 shadow-sm dark:border-white/15 dark:bg-white/10">
                   {point}
                 </li>
               ))}
@@ -57,8 +57,8 @@ export function Hero() {
           </div>
 
           <div className="relative">
-            <div className="absolute -inset-4 rounded-[2rem] bg-[linear-gradient(135deg,rgba(26,109,181,0.18),rgba(59,154,225,0.04))] blur-2xl" />
-            <div className="relative overflow-hidden rounded-[2rem] border border-white/60 bg-white/80 p-5 shadow-[var(--shadow-diffuse)] backdrop-blur dark:border-white/10 dark:bg-[var(--bg-elevated)]">
+            <div className="absolute -inset-4 rounded-[2rem] bg-[linear-gradient(135deg,rgba(26,109,181,0.18),rgba(59,154,225,0.04))] blur-2xl dark:bg-[linear-gradient(135deg,rgba(125,211,252,0.2),rgba(59,154,225,0.08))]" />
+            <div className="relative overflow-hidden rounded-[2rem] border border-white/60 bg-white/80 p-5 shadow-[var(--shadow-diffuse)] backdrop-blur dark:border-white/15 dark:bg-white/10">
               <Image
                 src="/images/products/oxisuretech.jpg"
                 alt="OxiSureTech Premium oxygen tubing displayed in a clean home-care setting"
