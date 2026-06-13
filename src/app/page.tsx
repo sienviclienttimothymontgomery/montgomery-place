@@ -1,6 +1,7 @@
 import { Hero } from "@/components/home/hero";
 import { OxiSureTechFoundation } from "@/components/home/oxisuretech-foundation";
-import { ProductSpotlights } from "@/components/home/product-spotlights";
+import { HomepageLanes } from "@/components/home/homepage-lanes";
+import { ProofAndRoadmap } from "@/components/home/proof-and-roadmap";
 import { TeaserSections } from "@/components/home/teaser-sections";
 import { EducationHub } from "@/components/home/education-hub";
 import { NewsletterSignup } from "@/components/home/newsletter-signup";
@@ -26,7 +27,8 @@ export default function HomePage() {
     <>
       <Hero />
       <OxiSureTechFoundation />
-      <ProductSpotlights />
+      <HomepageLanes />
+      <ProofAndRoadmap />
       <TeaserSections />
       <EducationHub />
       <NewsletterSignup />

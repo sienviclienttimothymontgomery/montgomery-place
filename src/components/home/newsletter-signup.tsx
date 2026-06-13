@@ -33,7 +33,7 @@ export function NewsletterSignup() {
   };
 
   return (
-    <Section>
+    <Section id="newsletter-signup-section">
       <Container size="md">
         <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-[var(--accent)] to-[var(--accent-hover)] p-12 text-white md:p-16">
           <div className="absolute top-0 right-0 h-64 w-64 translate-x-1/2 -translate-y-1/2 rounded-full bg-white/5" />

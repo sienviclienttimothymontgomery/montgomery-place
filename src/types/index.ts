@@ -12,6 +12,7 @@ export interface Product {
   fullPage: boolean;
   color: string;
   hidden?: boolean;
+  status: "available" | "development";
 }
 
 export type ProductCategory =

@@ -26,6 +26,15 @@ We use the information we collect to:
 
 Your personal information is stored securely using industry-standard encryption and security practices. We use Supabase as our data infrastructure provider, which maintains SOC 2 Type II compliance.
 
+## Healthcare Data & App Privacy
+
+**No Health Data Collection on this Website**: Montgomery Place does not collect, store, or process personal health information (PHI), medical records, or physiological monitoring data via this website (montgomeryplacellc.com). Any information submitted through our contact forms is treated as general commercial inquiry data and is not used for medical analysis or clinical purposes.
+
+**Future Connected Ecosystem Privacy**: Certain concepts on our product roadmap (such as GlowSafe or CareDock) are designed to integrate with home respiratory monitoring devices. When these products transition from prototyping to active release, they will operate under a dedicated, HIPAA-compliant privacy framework. This will include:
+- Explicit opt-in consent for any health-related data transmission.
+- End-to-end encryption for all real-time status updates between devices and dashboards.
+- Zero sharing of medical or usage telemetry with unauthorized third parties.
+
 ## Your Rights
 
 You have the right to:

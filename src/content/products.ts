@@ -25,6 +25,7 @@ export const products: Product[] = [
     ],
     fullPage: true,
     color: "#1A6DB5",
+    status: "available",
   },
   {
     slug: "glowsafe",
@@ -47,9 +48,15 @@ export const products: Product[] = [
     category: "safety",
     icon: "Shield",
     image: "/images/products/glowsafe.jpg",
+    gallery: [
+      "/images/products/glowsafe.jpg",
+      "/images/products/glowsafe-features.jpg",
+      "/images/products/glowsafe-lifestyle.jpg",
+      "/images/products/glowsafe-packaging.jpg",
+    ],
     fullPage: true,
     color: "#10B981",
-    hidden: true,
+    status: "development",
   },
   {
     slug: "reelair",
@@ -70,7 +77,7 @@ export const products: Product[] = [
     icon: "Move",
     fullPage: true,
     color: "#3B82F6",
-    hidden: true,
+    status: "development",
   },
   {
     slug: "flexcannula",
@@ -90,7 +97,7 @@ export const products: Product[] = [
     icon: "Heart",
     fullPage: true,
     color: "#EC4899",
-    hidden: true,
+    status: "development",
   },
   {
     slug: "gooxi",
@@ -109,6 +116,7 @@ export const products: Product[] = [
     image: "/images/products/gooxi.png",
     fullPage: false,
     color: "#EF4444",
+    status: "development",
   },
   {
     slug: "caredock",
@@ -126,6 +134,7 @@ export const products: Product[] = [
     icon: "Users",
     fullPage: false,
     color: "#06B6D4",
+    status: "development",
   },
 ];
 
